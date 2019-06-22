@@ -10,11 +10,11 @@
 		},
 		{
 			"path": "C:\\Users\\deban\\OneDrive\\Dev\\8th_Sem\\Final_Year_Project\\College",
-			"name": "College"
+			"name": "municipality"
 		},
 		{
 			"path": "C:\\Users\\deban\\OneDrive\\Dev\\8th_Sem\\Final_Year_Project\\College\\db",
-			"name": "database_college"
+			"name": "municipality_db"
 		}
 	],
 	"settings": {
@@ -29,7 +29,7 @@
 				"connectString": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=\"C:\\Users\\deban\\OneDrive\\Dev\\8th_Sem\\Final_Year_Project\\College\\db\\Online_Municipality_System.MDF\";Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False",
 				"connectionTimeout": 30,
 				"dialect": "MSSQL",
-				"name": "school"
+				"name": "municipalitydb"
 			}
 		]
 	}

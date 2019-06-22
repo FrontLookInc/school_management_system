@@ -98,31 +98,81 @@ namespace School_Management_System.school.sishu_bikas_model_school
             {
                 if (addsection_permanentaddress_field_check())
                 {
+                    instructon_for_pad_to_lad_sync.Visible = true;
+
                     lad_hno.Text = pad_hno.Text;
                     lad_area.Text = pad_area.Text;
                     lad_city.Text = pad_city.Text;
                     lad_pin.Text = pad_pin.Text;
                     lad_district.Text = pad_district.Text;
                     lad_state.Text = pad_state.Text;
+
+                    pad_hno.ReadOnly = true;
+                    pad_area.ReadOnly = true;
+                    pad_city.ReadOnly = true;
+                    pad_pin.ReadOnly = true;
+                    pad_district.ReadOnly = true;
+                    pad_state.ReadOnly = true;
+
+                    lad_hno.ReadOnly = true;
+                    lad_area.ReadOnly = true;
+                    lad_city.ReadOnly = true;
+                    lad_pin.ReadOnly = true;
+                    lad_district.ReadOnly = true;
+                    lad_state.ReadOnly = true;
                 }
                 else
                 {
+                    instructon_for_pad_to_lad_sync.Visible = false;
+
                     lad_hno.Text = string.Empty;
                     lad_area.Text = string.Empty;
                     lad_city.Text = string.Empty;
                     lad_pin.Text = string.Empty;
                     lad_district.Text = string.Empty;
                     lad_state.Text = string.Empty;
+
+                    pad_hno.ReadOnly = false;
+                    pad_area.ReadOnly = false;
+                    pad_city.ReadOnly = false;
+                    pad_pin.ReadOnly = false;
+                    pad_district.ReadOnly = false;
+                    pad_state.ReadOnly = false;
+
+                    lad_hno.ReadOnly = false;
+                    lad_area.ReadOnly = false;
+                    lad_city.ReadOnly = false;
+                    lad_pin.ReadOnly = false;
+                    lad_district.ReadOnly = false;
+                    lad_state.ReadOnly = false;
+
+                    pad_to_lad_sync.Checked = false;
                 }
             }
             else
             {
+                instructon_for_pad_to_lad_sync.Visible = false;
+
                 lad_hno.Text = string.Empty;
                 lad_area.Text = string.Empty;
                 lad_city.Text = string.Empty;
                 lad_pin.Text = string.Empty;
                 lad_district.Text = string.Empty;
                 lad_state.Text = string.Empty;
+
+                lad_hno.ReadOnly = false;
+                lad_area.ReadOnly = false;
+                lad_city.ReadOnly = false;
+                lad_pin.ReadOnly = false;
+                lad_district.ReadOnly = false;
+                lad_state.ReadOnly = false;
+
+                pad_hno.ReadOnly = false;
+                pad_area.ReadOnly = false;
+                pad_city.ReadOnly = false;
+                pad_pin.ReadOnly = false;
+                pad_district.ReadOnly = false;
+                pad_state.ReadOnly = false;
             }
         }
 
@@ -406,7 +456,7 @@ namespace School_Management_System.school.sishu_bikas_model_school
                    "b.name = '" + name.Text + "' ";
                 string command2= "SELECT students_reg_id, name, contact_no1, contact_no2, dob FROM students WHERE name='" + name.Text + "' AND dob='" + dob.Text.ToString().Trim() + 
                     "' AND (contact_no1='" + contact_no1.Text.ToString().Trim() + "' OR contact_no1='" + contact_no2.Text.ToString().Trim() +
-                     "' OR contact_no2='" + contact_no1.Text.ToString().Trim() + "'  OR contact_no2='" + contact_no2.Text.ToString().Trim() + "')";
+                     "' OR contact_no2='" + contact_no1.Text.ToString().Trim() + "'  OR contact_no2='" + contact_no2.Text.ToString().Trim() + "') AND tc = 0";
                 cmd.CommandText = command2;
                 /* cmd.CommandText = command2*/
                 con.Open();
@@ -484,7 +534,7 @@ namespace School_Management_System.school.sishu_bikas_model_school
             catch (Exception x)
             {
                 Response.Write("<script language='javascript'>" +
-                    "window.confirm('" + x.Message + "');" +
+                    "window.alert('" + x.Message + "');" +
                     "</script>");
             }
         }
@@ -494,48 +544,159 @@ namespace School_Management_System.school.sishu_bikas_model_school
             myreader.Close();
             con.Close();
             get_data_to_s_string();
-            cmd.CommandText = "INSERT INTO students (students_reg_id,name,dob,gender,blood_group,religion,caste,father_name,mother_name,guardian_name," +
-             "p_address_hno,p_address_area,p_address_city,p_address_pin,p_address_dist,p_address_state," +
-             "l_address_hno,l_address_area,l_address_city,l_address_pin,l_address_dist,l_address_state," +
-             "contact_no1,contact_no2,email_id," +
-             "admission_date,tc_from,note,update_time,updated_by) " +
-             "VALUES('" + s_student_id + "','" + s_name + "','" + s_dob + "','" + s_gender + "','" + s_blood_group + "','"
-             + s_religion + "','" + s_caste + "','" + s_f_name + "','" + s_m_name + "','" + s_g_name + "','"
-             + s_pad_hno + "','" + s_pad_area + "','" + s_pad_city + "','" + s_pad_pin + "','" + s_pad_dist + "','" + s_pad_state + "','"
-             + s_lad_hno + "','" + s_lad_area + "','" + s_lad_city + "','" + s_lad_pin + "','" + s_lad_dist + "','" + s_lad_state + "','"
-             + s_con_no1 + "','" + s_con_no2 + "','" + s_emailid + "','"
-             + s_admission_dt + "','" + s_tc_from + "','" + s_note + "','" + s_update_time + "','" + s_updated_by + "')";
-            con.Open();
-            int r = cmd.ExecuteNonQuery();
-            con.Close();
-            if (r.Equals(1))
-            {
-                cmd.CommandText = "SELECT students_reg_id FROM students WHERE name='" + s_name + "' AND contact_no1='" + s_con_no1 + "' AND contact_no2='" + s_con_no2 + "' " +
-                    "AND father_name='" + s_f_name + "' AND mother_name='" + s_m_name + "' AND guardian_name='" + s_g_name + "'";
-                con.Open();
+            string x_students_reg_id = "";
+            Boolean x_student_info_check = x_student_check(x_students_reg_id);
 
-                myreader = cmd.ExecuteReader();
-                if (myreader.HasRows && !myreader.IsClosed)
+            string command1 = "INSERT INTO students (students_reg_id,name,dob,gender,blood_group,religion,caste,father_name,mother_name,guardian_name," +
+                "p_address_hno,p_address_area,p_address_city,p_address_pin,p_address_dist,p_address_state," +
+                "l_address_hno,l_address_area,l_address_city,l_address_pin,l_address_dist,l_address_state," +
+                "contact_no1,contact_no2,email_id," +
+                "admission_date,tc_from,note,tc,x_students_reg_id,update_time,updated_by) " +
+                "VALUES('" + s_student_id + "','" + s_name + "','" + s_dob + "','" + s_gender + "','" + s_blood_group + "','"
+                + s_religion + "','" + s_caste + "','" + s_f_name + "','" + s_m_name + "','" + s_g_name + "','"
+                + s_pad_hno + "','" + s_pad_area + "','" + s_pad_city + "','" + s_pad_pin + "','" + s_pad_dist + "','" + s_pad_state + "','"
+                + s_lad_hno + "','" + s_lad_area + "','" + s_lad_city + "','" + s_lad_pin + "','" + s_lad_dist + "','" + s_lad_state + "','"
+                + s_con_no1 + "','" + s_con_no2 + "','" + s_emailid + "','"
+                + s_admission_dt + "','" + s_tc_from + "','" + s_note + "','" + 0 + "','" + x_students_reg_id + "','" + s_update_time + "','" + s_updated_by + "')";
+
+            string command2 = "INSERT INTO students (students_reg_id,name,dob,gender,blood_group,religion,caste,father_name,mother_name,guardian_name," +
+                "p_address_hno,p_address_area,p_address_city,p_address_pin,p_address_dist,p_address_state," +
+                "l_address_hno,l_address_area,l_address_city,l_address_pin,l_address_dist,l_address_state," +
+                "contact_no1,contact_no2,email_id," +
+                "admission_date,tc_from,note,tc,update_time,updated_by) " +
+                "VALUES('" + s_student_id + "','" + s_name + "','" + s_dob + "','" + s_gender + "','" + s_blood_group + "','"
+                + s_religion + "','" + s_caste + "','" + s_f_name + "','" + s_m_name + "','" + s_g_name + "','"
+                + s_pad_hno + "','" + s_pad_area + "','" + s_pad_city + "','" + s_pad_pin + "','" + s_pad_dist + "','" + s_pad_state + "','"
+                + s_lad_hno + "','" + s_lad_area + "','" + s_lad_city + "','" + s_lad_pin + "','" + s_lad_dist + "','" + s_lad_state + "','"
+                + s_con_no1 + "','" + s_con_no2 + "','" + s_emailid + "','"
+                + s_admission_dt + "','" + s_tc_from + "','" + s_note + "','" + 0 + "','" + s_update_time + "','" + s_updated_by + "')";
+
+            string command3 = "SELECT students_reg_id FROM students WHERE name='" + s_name + "' AND contact_no1='" + s_con_no1 + "' AND contact_no2='" + s_con_no2 + "' " +
+                        "AND father_name='" + s_f_name + "' AND mother_name='" + s_m_name + "' AND guardian_name='" + s_g_name + "'";
+
+            string command4 = "UPDATE students " +
+                "set " +
+                "obsolate=1" +
+                "WHERE" +
+                "students_reg_id='" + x_students_reg_id + "'";
+
+            if (x_student_info_check)
+            {
+                cmd.CommandText = command2;
+                con.Open();
+                int r = cmd.ExecuteNonQuery();
+                con.Close();
+                if (r.Equals(1))
                 {
-                    string x = "";
+                    cmd.CommandText = command4;
+                    con.Open();
+                    int s = cmd.ExecuteNonQuery();
+                    con.Close();
+                    if (s.Equals(1))
+                    {
+                        cmd.CommandText = command3;
+                        con.Open();
+
+                        myreader = cmd.ExecuteReader();
+                        if (myreader.HasRows && !myreader.IsClosed)
+                        {
+                            string x = "";
+                            while (myreader.Read())
+                            {
+                                x = myreader["students_reg_id"].ToString();
+                            }
+                            con.Close();
+                            Response.Write("<script language='javascript'>" +
+                           "window.alert('Data Saved Successfully with Student Registration Number:" + x + " ');" +
+                           "window.location='../sishu_bikas_model_school/manage_students#content_show.aspx';" +
+                           "</script>");
+                        }
+                        else if (myreader.IsClosed)
+                        {
+                            Response.Write("<script language='javascript'>" +
+                               "window.alert('Reader Is closed..!!! Report Error');" +
+                               "</script>");
+                        }
+                    }
+                }
+               
+            }
+            else
+            {
+                cmd.CommandText = command2;
+                con.Open();
+                int r = cmd.ExecuteNonQuery();
+                con.Close();
+                if (r.Equals(1))
+                {
+                    cmd.CommandText = "SELECT students_reg_id FROM students WHERE name='" + s_name + "' AND contact_no1='" + s_con_no1 + "' AND contact_no2='" + s_con_no2 + "' " +
+                        "AND father_name='" + s_f_name + "' AND mother_name='" + s_m_name + "' AND guardian_name='" + s_g_name + "'";
+                    con.Open();
+
+                    myreader = cmd.ExecuteReader();
+                    if (myreader.HasRows && !myreader.IsClosed)
+                    {
+                        string x = "";
+                        while (myreader.Read())
+                        {
+                            x = myreader["students_reg_id"].ToString();
+                        }
+                        con.Close();
+                        Response.Write("<script language='javascript'>" +
+                       "window.alert('Data Saved Successfully with Student Registration Number:" + x + " ');" +
+                       "window.location='../sishu_bikas_model_school/manage_students#content_show.aspx';" +
+                       "</script>");
+                    }
+                    else if (myreader.IsClosed)
+                    {
+                        Response.Write("<script language='javascript'>" +
+                           "window.alert('Reader Is closed..!!! Report Error');" +
+                           "</script>");
+                    }
+                }
+            }
+        }
+
+        protected Boolean x_student_check(String x_students_reg_id)
+        {
+            Boolean b = false;
+            try
+            {
+                con.Close();
+                string command2 = "SELECT students_reg_id, name, contact_no1, contact_no2, dob FROM students WHERE name='" + name.Text + "' AND dob='" + dob.Text.ToString().Trim() +
+                    "' AND (contact_no1='" + contact_no1.Text.ToString().Trim() + "' OR contact_no1='" + contact_no2.Text.ToString().Trim() +
+                     "' OR contact_no2='" + contact_no1.Text.ToString().Trim() + "' OR contact_no2='" + contact_no2.Text.ToString().Trim() + "') AND tc = 1 AND obsolate = 0";
+                cmd.CommandText = command2;
+                /* cmd.CommandText = command2*/
+                con.Open();
+                myreader = cmd.ExecuteReader();
+                int row_count = 0;
+                DataTable dt = new DataTable();
+                dt.Load(myreader);
+                row_count = dt.Rows.Count;
+                dt.Dispose();
+                myreader.Close();
+                myreader = cmd.ExecuteReader();
+                if (myreader.HasRows)
+                {
                     while (myreader.Read())
                     {
-                        x = myreader["students_reg_id"].ToString();
+                        x_students_reg_id = myreader["students_reg_id"].ToString();
                     }
-                    con.Close();
-                    Response.Write("<script language='javascript'>" +
-                   "window.alert('Data Saved Successfully with Student Registration Number:" + x + " ');" +
-                   "window.location='../sishu_bikas_model_school/manage_students#content_show.aspx';" +
-                   "</script>");
+                    b = true;
                 }
-                else if (myreader.IsClosed)
+                else
                 {
-                    Response.Write("<script language='javascript'>" +
-                       "window.alert('Reader Is closed..!!! Report Error');" +
-                       "</script>");
+                    b = false;
                 }
-                
             }
+            catch (Exception x_student_check_error)
+            {
+                Response.Write("<script language='javascript'>" +
+                    "window.alert('" + x_student_check_error.Message + "');" +
+                    "</script>");
+            }
+            return b;
         }
 
         protected Boolean addsection_permanentaddress_field_check()
@@ -717,31 +878,81 @@ namespace School_Management_System.school.sishu_bikas_model_school
             {
                 if (e_addsection_permanentaddress_field_check())
                 {
+                    e_instructon_for_pad_to_lad_sync.Visible = true;
+
                     e_lad_hno.Text = e_pad_hno.Text;
                     e_lad_area.Text = e_pad_area.Text;
                     e_lad_city.Text = e_pad_city.Text;
                     e_lad_pin.Text = e_pad_pin.Text;
                     e_lad_district.Text = e_pad_district.Text;
                     e_lad_state.Text = e_pad_state.Text;
+
+                    e_pad_hno.ReadOnly = true;
+                    e_pad_area.ReadOnly = true;
+                    e_pad_city.ReadOnly = true;
+                    e_pad_pin.ReadOnly = true;
+                    e_pad_district.ReadOnly = true;
+                    e_pad_state.ReadOnly = true;
+
+                    e_lad_hno.ReadOnly = true;
+                    e_lad_area.ReadOnly = true;
+                    e_lad_city.ReadOnly = true;
+                    e_lad_pin.ReadOnly = true;
+                    e_lad_district.ReadOnly = true;
+                    e_lad_state.ReadOnly = true;
                 }
                 else
                 {
+                    e_instructon_for_pad_to_lad_sync.Visible = false;
+
                     e_lad_hno.Text = string.Empty;
                     e_lad_area.Text = string.Empty;
                     e_lad_city.Text = string.Empty;
                     e_lad_pin.Text = string.Empty;
                     e_lad_district.Text = string.Empty;
                     e_lad_state.Text = string.Empty;
+
+                    e_pad_hno.ReadOnly = false;
+                    e_pad_area.ReadOnly = false;
+                    e_pad_city.ReadOnly = false;
+                    e_pad_pin.ReadOnly = false;
+                    e_pad_district.ReadOnly = false;
+                    e_pad_state.ReadOnly = false;
+
+                    e_lad_hno.ReadOnly = false;
+                    e_lad_area.ReadOnly = false;
+                    e_lad_city.ReadOnly = false;
+                    e_lad_pin.ReadOnly = false;
+                    e_lad_district.ReadOnly = false;
+                    e_lad_state.ReadOnly = false;
+
+                    e_pad_to_lad_sync.Checked = false;
                 }
             }
             else
             {
+                e_instructon_for_pad_to_lad_sync.Visible = false;
+
                 e_lad_hno.Text = string.Empty;
                 e_lad_area.Text = string.Empty;
                 e_lad_city.Text = string.Empty;
                 e_lad_pin.Text = string.Empty;
                 e_lad_district.Text = string.Empty;
                 e_lad_state.Text = string.Empty;
+
+                e_lad_hno.ReadOnly = false;
+                e_lad_area.ReadOnly = false;
+                e_lad_city.ReadOnly = false;
+                e_lad_pin.ReadOnly = false;
+                e_lad_district.ReadOnly = false;
+                e_lad_state.ReadOnly = false;
+
+                e_pad_hno.ReadOnly = false;
+                e_pad_area.ReadOnly = false;
+                e_pad_city.ReadOnly = false;
+                e_pad_pin.ReadOnly = false;
+                e_pad_district.ReadOnly = false;
+                e_pad_state.ReadOnly = false;
             }
         }
 
@@ -776,7 +987,7 @@ namespace School_Management_System.school.sishu_bikas_model_school
             try
             {
                 con.Close();
-                cmd.CommandText = "SELECT students_reg_id, name FROM students";
+                cmd.CommandText = "SELECT students_reg_id, name FROM students WHERE tc = 0";
                 con.Open();
                 myreader = null;
                 myreader = cmd.ExecuteReader();
@@ -901,34 +1112,76 @@ namespace School_Management_System.school.sishu_bikas_model_school
 
         protected void on_id_ddl_select_fetch_data()
         {
-            if(!e_id_ddl.SelectedItem.Value.Equals(string.Empty)||!e_id_ddl.SelectedItem.Value.Equals(null))
+            if (!e_id_ddl.SelectedItem.Value.Equals(string.Empty)||!e_id_ddl.SelectedItem.Value.Equals(null))
             {
                 cmd.CommandText = "SELECT * FROM students WHERE students_reg_id='" + e_id_ddl.SelectedItem.Value.ToString() + "'";
                 con.Open();
                 myreader = cmd.ExecuteReader();
                 if (myreader.HasRows)
                 {
-                    e_gender_ddl.ClearSelection();
-                    e_religion_ddl.ClearSelection();
-                    e_blood_group_ddl.ClearSelection();
-                    e_caste_ddl.ClearSelection();
+                    
                     while (myreader.Read())
                     {
-                        e_name.Text = myreader["name"].ToString();
-                        e_religion_ddl.Items.FindByText(myreader["religion"].ToString()).Selected = true;
-                        e_gender_ddl.Items.FindByText(myreader["gender"].ToString()).Selected = true;
-                        e_blood_group_ddl.Items.FindByText(myreader["blood_group"].ToString()).Selected = true;
-                        e_caste_ddl.Items.FindByText(myreader["caste"].ToString()).Selected = true;
-                        e_father_name.Text = myreader["father_name"].ToString();
-                        e_mother_name.Text = myreader["mother_name"].ToString();
-                        e_guardian_name.Text = myreader["guardian_name"].ToString();
-                        DateTime date = DateTime.Parse(myreader["dob"].ToString());
-                        
-                        e_dob.Text = date.Date.Day.ToString()+"-"+ date.Date.Month.ToString()+"-"+ date.Date.Year.ToString();
+                        /*string g_name, g_dob, g_gender, g_blood_group, g_religion, g_caste, g_f_name, g_m_name, g_guardian_name,
+            g_pad_hno, g_pad_area, g_pad_city, g_pad_pin, g_pad_dist, g_pad_state,
+            g_lad_hno, g_lad_area, g_lad_city, g_lad_pin, g_lad_dist, g_lad_state,
+            g_con_no1, g_con_no2, g_emailid, g_admission_dt, g_tc_from, g_note, g_tc_to, g_tc_date, g_update_time, g_updated_by;*/
+                        //Basic Info
+                        g_name = myreader["name"].ToString();
+                        g_religion=myreader["religion"].ToString();
+                        g_gender=myreader["gender"].ToString();
+                        g_blood_group=myreader["blood_group"].ToString();
+                        g_caste=myreader["caste"].ToString();
+                        g_dob = myreader["dob"].ToString();
+                        g_f_name = myreader["father_name"].ToString();
+                        g_m_name = myreader["mother_name"].ToString();
+                        g_guardian_name = myreader["guardian_name"].ToString();
+                        //permanent address
+                        g_pad_hno= myreader["p_address_hno"].ToString();
+                        g_pad_area = myreader["p_address_area"].ToString();
+                        g_pad_city = myreader["p_address_city"].ToString();
+                        g_pad_pin = myreader["p_address_pin"].ToString();
+                        g_pad_dist = myreader["p_address_dist"].ToString();
+                        g_pad_state = myreader["p_address_state"].ToString();
+                        //local address
+                        g_lad_hno = myreader["l_address_hno"].ToString();
+                        g_lad_area = myreader["l_address_area"].ToString();
+                        g_lad_city = myreader["l_address_city"].ToString();
+                        g_lad_pin = myreader["l_address_pin"].ToString();
+                        g_lad_dist = myreader["l_address_dist"].ToString();
+                        g_lad_state = myreader["l_address_state"].ToString();
+                        //contact details
+                        g_con_no1 = myreader["contact_no1"].ToString();
+                        g_con_no2 = myreader["contact_no2"].ToString();
+                        g_emailid = myreader["email_id"].ToString();
+                        //addmission details
+                        g_admission_dt = myreader["contact_no1"].ToString();
+                        g_tc_from = myreader["contact_no1"].ToString();
+                        g_note = myreader["contact_no1"].ToString();
+                        g_tc_to = myreader["contact_no1"].ToString();
+                        g_tc_date = myreader["contact_no1"].ToString();
                     }
                 }
                 con.Close();
             }
+        }
+
+        protected void get_data_to_page()
+        {
+            e_gender_ddl.ClearSelection();
+            e_religion_ddl.ClearSelection();
+            e_blood_group_ddl.ClearSelection();
+            e_caste_ddl.ClearSelection();
+
+            e_name.Text = myreader["name"].ToString();
+            e_religion_ddl.Items.FindByText(myreader["religion"].ToString()).Selected = true;
+            e_gender_ddl.Items.FindByText(myreader["gender"].ToString()).Selected = true;
+            e_blood_group_ddl.Items.FindByText(myreader["blood_group"].ToString()).Selected = true;
+            e_caste_ddl.Items.FindByText(myreader["caste"].ToString()).Selected = true;
+            e_dob.Text = DateTime.Parse(myreader["dob"].ToString()).ToString("yyyy-MM-dd");
+            e_father_name.Text = myreader["father_name"].ToString();
+            e_mother_name.Text = myreader["mother_name"].ToString();
+            e_guardian_name.Text = myreader["guardian_name"].ToString();
         }
 
         protected Boolean e_addsection_permanentaddress_field_check()

@@ -167,6 +167,8 @@
     <Content Include="school\sishu_bikas_model_school\js\jquery.min.js" />
     <Content Include="school\sishu_bikas_model_school\js\wow.js" />
     <Content Include="school\sishu_bikas_model_school\sishubikash_login.aspx" />
+    <Content Include="school\sishu_bikas_model_school\sqlcodes\schoolmanagement_script.sql" />
+    <Content Include="school\sishu_bikas_model_school\sqlcodes\testing.sql" />
     <Content Include="school\sishu_bikas_model_school\style\style.css" />
     <Content Include="school\sishu_bikas_model_school\test.aspx" />
     <Content Include="style\style.css" />
@@ -241,6 +243,8 @@
   <ItemGroup>
     <Folder Include="images\" />
     <Folder Include="school\images\" />
+    <Folder Include="school\select\css\" />
+    <Folder Include="school\select\js\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

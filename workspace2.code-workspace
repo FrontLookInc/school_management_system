@@ -5,18 +5,18 @@
 			"name": ""
 		},
 		{
-			"path": "C:\\Users\\deban\\source\\repos\\school_db",
+			"path": "C:\\Users\\deban\\source\\repos\\school_management_system\\school_db",
 			"name": "database"
 		}
 	],
 	"settings": {
 		"sqltools.connections": [
 			{
-				"connectString": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=\"C:\\Users\\deban\\source\\repos\\school_db\\DB\\SISHUBIKASHDB.MDF\";Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False",
+				"connectString": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=\"C:\\Users\\deban\\source\\repos\\school_management_system\\school_db\\DB\\SISHUBIKASHDB.MDF\";Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False",
 				"connectionTimeout": 30,
 				"dialect": "MSSQL",
 				"name": "school"
-			}
+			},
 		]
 	}
 }

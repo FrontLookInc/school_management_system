@@ -26,16 +26,16 @@
                                 <h4 style="text-align: left; text-anchor: middle; font-size: 1.2em; font-weight: 800">Basic Details</h4>
                                 <!--NAME-->
                                 <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Name:" Height="17px" Width="160px" />
-                                <asp:TextBox ID="name" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" AutoCompleteType="DisplayName" />
+                                <asp:TextBox ID="name" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" AutoCompleteType="DisplayName" TabIndex="1" />
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <!--RELIGION DETAILS-->
                                 <asp:Label runat="server" Font-Bold="true" Height="17px" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Text="Religion:" Width="160px" />
-                                <asp:DropDownList ID="religion_ddl" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" AutoPostBack="true" OnSelectedIndexChanged="religion_ddl_SelectedIndexChanged" />
-                                <asp:TextBox ID="religion_other" runat="server" Visible="false" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" AutoCompleteType="Disabled" />
+                                <asp:DropDownList ID="religion_ddl" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" AutoPostBack="true" OnSelectedIndexChanged="religion_ddl_SelectedIndexChanged" TabIndex="2" />
+                                <asp:TextBox ID="religion_other" runat="server" Visible="false" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" AutoCompleteType="Disabled" TabIndex="3" />
                                 <br />
                                 <!--GENDER-->
                                 <asp:Label runat="server" Font-Bold="true" Height="17px" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Text="Gender:" Width="160px" />
-                                <asp:DropDownList ID="gender_ddl" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Width="371px">
+                                <asp:DropDownList ID="gender_ddl" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Width="371px" TabIndex="4">
                                     <asp:ListItem Value="0" Text="-SELECT ITEM-" />
                                     <asp:ListItem Value="1" Text="Male" />
                                     <asp:ListItem Value="2" Text="Female" />
@@ -44,29 +44,29 @@
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <!--BLOOD GROUP DETAILS-->
                                 <asp:Label runat="server" Font-Bold="true" Height="17px" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Text="Blood Group:" Width="160px" />
-                                <asp:DropDownList ID="blood_group_ddl" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" AutoPostBack="true" OnSelectedIndexChanged="blood_group_ddl_SelectedIndexChanged" />
-                                <asp:TextBox ID="blood_group_other" runat="server" Visible="false" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" AutoCompleteType="Disabled" />
+                                <asp:DropDownList ID="blood_group_ddl" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" AutoPostBack="true" OnSelectedIndexChanged="blood_group_ddl_SelectedIndexChanged" TabIndex="5" />
+                                <asp:TextBox ID="blood_group_other" runat="server" Visible="false" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" AutoCompleteType="Disabled" TabIndex="6" />
                                 <br />
                                 <!--DATE OF BIRTH-->
                                 <asp:Label runat="server" Font-Bold="true" Height="17px" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Text="Date Of Birth:" Width="160px" />
-                                <asp:TextBox ID="dob" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="Date" AutoCompleteType="Disabled" />
+                                <asp:TextBox ID="dob" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="Date" AutoCompleteType="Disabled" TabIndex="7" />
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <!--CASTE DETAILS-->
                                 <asp:Label runat="server" Font-Bold="true" Height="17px" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Text="Caste:" Width="160px" />
-                                <asp:DropDownList ID="caste_ddl" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" AutoPostBack="true" OnSelectedIndexChanged="caste_ddl_SelectedIndexChanged" />
-                                <asp:TextBox ID="caste_other" runat="server" Visible="false" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" AutoCompleteType="Disabled" />
+                                <asp:DropDownList ID="caste_ddl" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" AutoPostBack="true" OnSelectedIndexChanged="caste_ddl_SelectedIndexChanged" TabIndex="8" />
+                                <asp:TextBox ID="caste_other" runat="server" Visible="false" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" AutoCompleteType="Disabled" TabIndex="9" />
                                 <br />
                                 <!--FATHER NAME-->
                                 <asp:Label runat="server" Font-Bold="true" Height="17px" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Text="Father's Name:" Width="160px" />
-                                <asp:TextBox ID="father_name" runat="server" Height="23px" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Width="371px" AutoCompleteType="DisplayName" />
+                                <asp:TextBox ID="father_name" runat="server" Height="23px" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Width="371px" AutoCompleteType="DisplayName" TabIndex="10" />
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <!--MOTHER NAME-->
                                 <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Mother's Name:" Height="17px" Width="160px" />
-                                <asp:TextBox ID="mother_name" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" AutoCompleteType="DisplayName" />
+                                <asp:TextBox ID="mother_name" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" AutoCompleteType="DisplayName" TabIndex="11" />
                                 <br />
                                 <!--GUARDIAN NAME-->
                                 <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Guardian's Name:" Height="17px" Width="160px" />
-                                <asp:TextBox ID="guardian_name" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" AutoCompleteType="FirstName" />
+                                <asp:TextBox ID="guardian_name" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" AutoCompleteType="FirstName" TabIndex="12" />
                                 <br />
                             </div>
                         </section>
@@ -79,11 +79,11 @@
 
                                 <h4 style="text-align: left; text-anchor: middle; font-size: 1.2em; font-weight: 800">Permanent Address</h4>
                                 <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Road/House Name:" Height="17px" Width="160px" />
-                                <asp:TextBox ID="pad_hno" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="SingleLine" AutoCompleteType="HomeStreetAddress" />
+                                <asp:TextBox ID="pad_hno" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="SingleLine" AutoCompleteType="HomeStreetAddress" TabIndex="13" />
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <!--VILLAGE/TOWN ADDRESS-->
                                 <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Village/Area:" Height="17px" Width="160px" />
-                                <asp:TextBox ID="pad_area" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="SingleLine" AutoCompleteType="HomeStreetAddress" />
+                                <asp:TextBox ID="pad_area" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="SingleLine" AutoCompleteType="HomeStreetAddress" TabIndex="14" />
                                 <br />
                                 <!--CITY ADDRESS-->
                                 <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="City:" Height="17px" Width="160px" />
@@ -110,6 +110,7 @@
 
                                 <h4 style="text-align: left; text-anchor: middle; font-size: 1.2em; font-weight: 800">Local Address</h4>
                                 <asp:CheckBox ID="pad_to_lad_sync" runat="server" Text=" Same as permanent address." AutoPostBack="true" OnCheckedChanged="pad_to_lad_sync_CheckedChanged" />
+                                <asp:Label ID="instructon_for_pad_to_lad_sync" runat="server" Text="  (Uncheck The Check Box To Edit Permanent Address.)" Visible="false"/>
                                 <br />
                                 <!--HOUSE OR WARD NUMBER-->
                                 <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Road/House Name:" Height="17px" Width="160px" />
@@ -195,7 +196,7 @@
                     <div style="padding-left: 60px; align-self: center; padding-top: 10px; padding-bottom: 10px; padding-right: 60px; position: center" class="text-justify">
                         <!--ID SELECTION-->
                         <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="True" Text="STUDENT REGISTRATION ID:" Height="17px" />
-                        <asp:DropDownList ID="e_id_ddl" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" AutoPostBack="true" OnSelectedIndexChanged="e_id_ddl_SelectedIndexChanged">
+                        <asp:DropDownList ID="e_id_ddl" runat="server" CssClass="" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" AutoPostBack="true" OnSelectedIndexChanged="e_id_ddl_SelectedIndexChanged">
                         </asp:DropDownList>
                         <!--FETCH DETAILS-->
 
@@ -288,6 +289,7 @@
                                 <div>
                                     <h4 style="text-align: left; text-anchor: middle; font-size: 1.2em; font-weight: 800">Local Address</h4>
                                     <asp:CheckBox ID="e_pad_to_lad_sync" runat="server" Text=" Same as permanent address." OnCheckedChanged="e_pad_to_lad_sync_CheckedChanged" />
+                                    <asp:Label ID="e_instructon_for_pad_to_lad_sync" runat="server" Text="  (Uncheck The Check Box To Edit Permanent Address.)" Visible="false"/>
                                     <br />
                                     <!--HOUSE OR WARD NUMBER-->
                                     <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Road/House Name:" Height="17px" Width="160px" />

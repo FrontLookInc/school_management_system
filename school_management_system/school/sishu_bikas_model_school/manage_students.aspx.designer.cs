@@ -220,6 +220,15 @@ namespace School_Management_System.school.sishu_bikas_model_school {
         protected global::System.Web.UI.WebControls.CheckBox pad_to_lad_sync;
         
         /// <summary>
+        /// instructon_for_pad_to_lad_sync control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label instructon_for_pad_to_lad_sync;
+        
+        /// <summary>
         /// lad_hno control.
         /// </summary>
         /// <remarks>
@@ -524,6 +533,15 @@ namespace School_Management_System.school.sishu_bikas_model_school {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox e_pad_to_lad_sync;
+        
+        /// <summary>
+        /// e_instructon_for_pad_to_lad_sync control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label e_instructon_for_pad_to_lad_sync;
         
         /// <summary>
         /// e_lad_hno control.
