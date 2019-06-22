@@ -1,0 +1,10 @@
+{
+    "sqltools.connections": [
+        {
+            "connectString": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=\"C:\\USERS\\DEBAN\\SOURCE\\REPOS\\SCHOOL MANAGEMENT SYSTEM\\SCHOOL_DB\\DB\\SISHUBIKASHDB.MDF\";Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False",
+            "connectionTimeout": 30,
+            "dialect": "MSSQL",
+            "name": "school"
+        }
+    ]
+}

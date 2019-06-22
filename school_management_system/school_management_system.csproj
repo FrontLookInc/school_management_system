@@ -1,0 +1,277 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0DC7C565-501C-4A57-BC62-8E0C9DD8678D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>School_Management_System</RootNamespace>
+    <AssemblyName>School Management System</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44354</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="school\Master1.Master" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="school\Master2.Master" />
+    <Content Include="school\fonts\fontawesome-webfont.eot" />
+    <Content Include="school\fonts\fontawesome-webfont.ttf" />
+    <Content Include="school\fonts\fontawesome-webfont.woff" />
+    <Content Include="school\fonts\fontawesome-webfont.woff2" />
+    <Content Include="school\fonts\FontAwesome.otf" />
+    <Content Include="school\sishu_bikas_model_school\manage_class.aspx" />
+    <Content Include="school\sishu_bikas_model_school\manage_students.aspx" />
+    <Content Include="school\sishu_bikas_model_school\manage_subjects.aspx" />
+    <Content Include="school\sishu_bikas_model_school\sishubikas1.Master" />
+    <Content Include="school\sishu_bikas_model_school\fonts\fontawesome-webfont.eot" />
+    <Content Include="school\sishu_bikas_model_school\fonts\fontawesome-webfont.ttf" />
+    <Content Include="school\sishu_bikas_model_school\fonts\fontawesome-webfont.woff" />
+    <Content Include="school\sishu_bikas_model_school\fonts\fontawesome-webfont.woff2" />
+    <Content Include="school\sishu_bikas_model_school\fonts\FontAwesome.otf" />
+    <Content Include="school\sishu_bikas_model_school\sishubikash_logged_in.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="contactform\contactform.js" />
+    <Content Include="contactform\Readme.txt" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="img\about-banner.jpg" />
+    <Content Include="img\bg-banner03.jpg" />
+    <Content Include="img\port01.jpg" />
+    <Content Include="img\port02.jpg" />
+    <Content Include="img\port03.jpg" />
+    <Content Include="img\portfolio01.jpg" />
+    <Content Include="img\portfolio02.jpg" />
+    <Content Include="index.html" />
+    <Content Include="js\arial.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\cufon-yui.js" />
+    <Content Include="js\cuf_run.js" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\jquery.easing.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\wow.js" />
+    <Content Include="school\contactform\contactform.js" />
+    <Content Include="school\contactform\Readme.txt" />
+    <Content Include="school\css\animate.css" />
+    <Content Include="school\css\bootstrap.css" />
+    <Content Include="school\css\bootstrap.min.css" />
+    <Content Include="school\css\font-awesome.min.css" />
+    <Content Include="school\css\style.css" />
+    <Content Include="school\fonts\fontawesome-webfont.svg" />
+    <Content Include="school\img\about-banner.jpg" />
+    <Content Include="school\img\bg-banner03.jpg" />
+    <Content Include="school\img\port01.jpg" />
+    <Content Include="school\img\port02.jpg" />
+    <Content Include="school\img\port03.jpg" />
+    <Content Include="school\img\portfolio01.jpg" />
+    <Content Include="school\img\portfolio02.jpg" />
+    <Content Include="school\js\arial.js" />
+    <Content Include="school\js\bootstrap.min.js" />
+    <Content Include="school\js\cufon-yui.js" />
+    <Content Include="school\js\cuf_run.js" />
+    <Content Include="school\js\custom.js" />
+    <Content Include="school\js\jquery.easing.min.js" />
+    <Content Include="school\js\jquery.js" />
+    <Content Include="school\js\jquery.min.js" />
+    <Content Include="school\js\wow.js" />
+    <Content Include="school\sishu_bikas_model_school\contactform\contactform.js" />
+    <Content Include="school\sishu_bikas_model_school\contactform\Readme.txt" />
+    <Content Include="school\sishu_bikas_model_school\css\animate.css" />
+    <Content Include="school\sishu_bikas_model_school\css\bootstrap.css" />
+    <Content Include="school\sishu_bikas_model_school\css\bootstrap.min.css" />
+    <Content Include="school\sishu_bikas_model_school\css\font-awesome.min.css" />
+    <Content Include="school\sishu_bikas_model_school\css\style.css" />
+    <Content Include="school\sishu_bikas_model_school\fonts\fontawesome-webfont.svg" />
+    <Content Include="school\sishu_bikas_model_school\images\schoolbackground.png" />
+    <Content Include="school\sishu_bikas_model_school\img\about-banner.jpg" />
+    <Content Include="school\sishu_bikas_model_school\img\bg-banner03.jpg" />
+    <Content Include="school\sishu_bikas_model_school\img\port01.jpg" />
+    <Content Include="school\sishu_bikas_model_school\img\port02.jpg" />
+    <Content Include="school\sishu_bikas_model_school\img\port03.jpg" />
+    <Content Include="school\sishu_bikas_model_school\img\portfolio01.jpg" />
+    <Content Include="school\sishu_bikas_model_school\img\portfolio02.jpg" />
+    <Content Include="school\sishu_bikas_model_school\js\arial.js" />
+    <Content Include="school\sishu_bikas_model_school\js\bootstrap.min.js" />
+    <Content Include="school\sishu_bikas_model_school\js\cufon-yui.js" />
+    <Content Include="school\sishu_bikas_model_school\js\cuf_run.js" />
+    <Content Include="school\sishu_bikas_model_school\js\custom.js" />
+    <Content Include="school\sishu_bikas_model_school\js\jquery.easing.min.js" />
+    <Content Include="school\sishu_bikas_model_school\js\jquery.js" />
+    <Content Include="school\sishu_bikas_model_school\js\jquery.min.js" />
+    <Content Include="school\sishu_bikas_model_school\js\wow.js" />
+    <Content Include="school\sishu_bikas_model_school\sishubikash_login.aspx" />
+    <Content Include="school\sishu_bikas_model_school\style\style.css" />
+    <Content Include="school\sishu_bikas_model_school\test.aspx" />
+    <Content Include="style\style.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="school\Master1.Master.cs">
+      <DependentUpon>Master1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="school\Master1.Master.designer.cs">
+      <DependentUpon>Master1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="school\Master2.Master.cs">
+      <DependentUpon>Master2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="school\Master2.Master.designer.cs">
+      <DependentUpon>Master2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="school\sishu_bikas_model_school\manage_class.aspx.cs">
+      <DependentUpon>manage_class.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="school\sishu_bikas_model_school\manage_class.aspx.designer.cs">
+      <DependentUpon>manage_class.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="school\sishu_bikas_model_school\manage_students.aspx.cs">
+      <DependentUpon>manage_students.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="school\sishu_bikas_model_school\manage_students.aspx.designer.cs">
+      <DependentUpon>manage_students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="school\sishu_bikas_model_school\manage_subjects.aspx.cs">
+      <DependentUpon>manage_subjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="school\sishu_bikas_model_school\manage_subjects.aspx.designer.cs">
+      <DependentUpon>manage_subjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="school\sishu_bikas_model_school\sishubikas1.Master.cs">
+      <DependentUpon>sishubikas1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="school\sishu_bikas_model_school\sishubikas1.Master.designer.cs">
+      <DependentUpon>sishubikas1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="school\sishu_bikas_model_school\sishubikash_logged_in.Master.cs">
+      <DependentUpon>sishubikash_logged_in.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="school\sishu_bikas_model_school\sishubikash_logged_in.Master.designer.cs">
+      <DependentUpon>sishubikash_logged_in.Master</DependentUpon>
+    </Compile>
+    <Compile Include="school\sishu_bikas_model_school\sishubikash_login.aspx.cs">
+      <DependentUpon>sishubikash_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="school\sishu_bikas_model_school\sishubikash_login.aspx.designer.cs">
+      <DependentUpon>sishubikash_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="school\sishu_bikas_model_school\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="school\sishu_bikas_model_school\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="school\images\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6980</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44354/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
