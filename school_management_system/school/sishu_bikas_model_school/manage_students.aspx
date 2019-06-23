@@ -391,5 +391,4 @@
             </div>
         </div>
     </asp:Panel>
-    $(document).ready(function () { $("#e_id_ddl").select2(); });
 </asp:Content>
