@@ -71,6 +71,24 @@
                             </div>
                         </section>
 
+                        <!--CONTACT DETAILS-->
+                        <section id="contactdetails" class="slideInright">
+                            <div>
+
+                                <h4 style="text-align: left; text-anchor: middle; font-size: 1.2em; font-weight: 800">Contact Details</h4>
+                                <!--CONTACT NUMBER-->
+                                <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Contact No 1.:" Height="17px" Width="160px" />
+                                <asp:TextBox ID="contact_no1" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" MaxLength="10" TextMode="Phone" AutoCompleteType="Disabled" />
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <!--GUARDIAN CONTACT NUMBER-->
+                                <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Contact No 2." Height="17px" Width="160px" />
+                                <asp:TextBox ID="contact_no2" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" MaxLength="10" TextMode="Phone" AutoCompleteType="Disabled" />
+                                <br />
+                                <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Email Id:" Height="17px" Width="160px" />
+                                <asp:TextBox ID="emailid" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="Email" AutoCompleteType="Disabled" />
+                            </div>
+                        </section>
+
                         <!--ADDRESS DETAILS-->
                         <section id="permanentaddressdetails" class="slideInright">
                             <div>
@@ -134,25 +152,7 @@
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <!--STATE-->
                                 <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="State:" Height="17px" Width="160px" />
-                                <asp:TextBox ID="lad_state" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="SingleLine" AutoCompleteType="HomeState" />
-                            </div>
-                        </section>
-
-                        <!--CONTACT DETAILS-->
-                        <section id="contactdetails" class="slideInright">
-                            <div>
-
-                                <h4 style="text-align: left; text-anchor: middle; font-size: 1.2em; font-weight: 800">Contact Details</h4>
-                                <!--CONTACT NUMBER-->
-                                <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Contact No 1.:" Height="17px" Width="160px" />
-                                <asp:TextBox ID="contact_no1" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" MaxLength="10" TextMode="Phone" AutoCompleteType="Disabled" />
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                <!--GUARDIAN CONTACT NUMBER-->
-                                <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Contact No 2." Height="17px" Width="160px" />
-                                <asp:TextBox ID="contact_no2" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" MaxLength="10" TextMode="Phone" AutoCompleteType="Disabled" />
-                                <br />
-                                <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Email Id:" Height="17px" Width="160px" />
-                                <asp:TextBox ID="emailid" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="Email" AutoCompleteType="Disabled" />
+                                <asp:TextBox ID="lad_state" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="SingleLine" AutoPostBack="true" AutoCompleteType="HomeState" OnTextChanged="lad_state_TextChanged" />
                             </div>
                         </section>
 
@@ -171,6 +171,11 @@
                                 <!--STATUS/NOTE-->
                                 <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="NOTE:" Height="17px" Width="160px" AutoCompleteType="Disabled" />
                                 <asp:TextBox ID="note" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" AutoCompleteType="Disabled" />
+                                <br />
+                                <asp:CheckBox ID="xstudent_check" runat="server" Text=" Ex Student Of this Institution" AutoPostBack="true" OnCheckedChanged="xstudent_check_CheckedChanged" />
+                                <br />
+                                <asp:Label ID="x_students_reg_id_label" runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Visible="false" Text="Ex Registration Id:" Height="17px" Width="160px" />
+                                <asp:TextBox ID="x_students_id" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" Visible="false" TextMode="SingleLine" AutoCompleteType="Disabled" />
                             </div>
                         </section>
 
@@ -252,6 +257,23 @@
                                 </div>
                             </section>
 
+                            <!--CONTACT DETAILS-->
+                            <section id="e_contactdetails" class="slideInright">
+                                <div>
+                                    <h4 style="text-align: left; text-anchor: middle; font-size: 1.2em; font-weight: 800">Contact Details</h4>
+                                    <!--CONTACT NUMBER-->
+                                    <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Contact No 1.:" Height="17px" Width="160px" />
+                                    <asp:TextBox ID="e_contact_no1" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" MaxLength="10" TextMode="Phone" AutoCompleteType="Disabled" />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <!--GUARDIAN CONTACT NUMBER-->
+                                    <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Contact No 2." Height="17px" Width="160px" />
+                                    <asp:TextBox ID="e_contact_no2" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" MaxLength="10" TextMode="Phone" AutoCompleteType="Disabled" />
+                                    <br />
+                                    <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Email Id:" Height="17px" Width="160px" />
+                                    <asp:TextBox ID="e_emailid" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="Email" AutoCompleteType="Disabled"/>
+                                </div>
+                            </section>
+
                             <!--ADDRESS DETAILS-->
                             <section id="e_permanentaddressdetails" class="slideInright">
                                 <div>
@@ -317,23 +339,6 @@
                                 </div>
                             </section>
 
-                            <!--CONTACT DETAILS-->
-                            <section id="e_contactdetails" class="slideInright">
-                                <div>
-                                    <h4 style="text-align: left; text-anchor: middle; font-size: 1.2em; font-weight: 800">Contact Details</h4>
-                                    <!--CONTACT NUMBER-->
-                                    <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Contact No 1.:" Height="17px" Width="160px" />
-                                    <asp:TextBox ID="e_contact_no1" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" MaxLength="10" TextMode="Phone" AutoCompleteType="Disabled" />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <!--GUARDIAN CONTACT NUMBER-->
-                                    <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Contact No 2." Height="17px" Width="160px" />
-                                    <asp:TextBox ID="e_contact_no2" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" MaxLength="10" TextMode="Phone" AutoCompleteType="Disabled" />
-                                    <br />
-                                    <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Email Id:" Height="17px" Width="160px" />
-                                    <asp:TextBox ID="e_emailid" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="Email" AutoCompleteType="Disabled" />
-                                </div>
-                            </section>
-
                             <!--ADMISSION DETAILS-->
                             <section id="e_addmissiondetails" class="slideInright">
                                 <div>
@@ -347,21 +352,25 @@
                                     <asp:TextBox ID="e_tc_from" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="SingleLine" AutoCompleteType="Disabled" />
                                     <br />
                                     <!--transferred parameter-->
-                                    <asp:CheckBox ID="transferred_parameter" runat="server" Text="Transferred" />
+                                    <asp:CheckBox ID="e_transferred_parameter" runat="server" Text="Transferred" />
                                     <br />
-                                    <asp:Panel ID="transfer_field" runat="server" Visible="false">
+                                    <asp:Panel ID="e_transfer_field" runat="server" Visible="false">
                                         <!--TRANSFERRED TO-->
                                         <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Transferred To:" Height="17px" Width="160px" />
                                         <asp:TextBox ID="e_tc_to" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="SingleLine" AutoCompleteType="Disabled" />
                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                             <!--TRANSFERRED DATE-->
                                         <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Transferred Date:" Height="17px" Width="160px" />
-                                        <asp:TextBox ID="e_tc_date" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="SingleLine" AutoCompleteType="Disabled" />
+                                        <asp:TextBox ID="e_tc_date" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="Date" AutoCompleteType="Disabled" ReadOnly="True" />
                                         <br />
                                     </asp:Panel>
                                     <!--STATUS/NOTE-->
                                     <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="NOTE:" Height="17px" Width="160px" />
                                     <asp:TextBox ID="e_note" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" AutoCompleteType="Disabled" />
+                                    <br />
+                                    <asp:Label ID="e_x_students_reg_id_label" runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Ex Registration Id:" Visible="false" Height="17px" Width="160px" />
+                                    <asp:TextBox ID="e_x_students_reg_id" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" Visible="false" ReadOnly="true" TextMode="SingleLine" AutoCompleteType="Disabled" />
+
                                 </div>
                             </section>
 

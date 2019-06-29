@@ -157,6 +157,33 @@ namespace School_Management_System.school.sishu_bikas_model_school {
         protected global::System.Web.UI.WebControls.TextBox guardian_name;
         
         /// <summary>
+        /// contact_no1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox contact_no1;
+        
+        /// <summary>
+        /// contact_no2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox contact_no2;
+        
+        /// <summary>
+        /// emailid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox emailid;
+        
+        /// <summary>
         /// pad_hno control.
         /// </summary>
         /// <remarks>
@@ -283,33 +310,6 @@ namespace School_Management_System.school.sishu_bikas_model_school {
         protected global::System.Web.UI.WebControls.TextBox lad_state;
         
         /// <summary>
-        /// contact_no1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox contact_no1;
-        
-        /// <summary>
-        /// contact_no2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox contact_no2;
-        
-        /// <summary>
-        /// emailid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox emailid;
-        
-        /// <summary>
         /// admission_date control.
         /// </summary>
         /// <remarks>
@@ -335,6 +335,33 @@ namespace School_Management_System.school.sishu_bikas_model_school {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox note;
+        
+        /// <summary>
+        /// xstudent_check control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox xstudent_check;
+        
+        /// <summary>
+        /// x_students_reg_id_label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label x_students_reg_id_label;
+        
+        /// <summary>
+        /// x_students_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox x_students_id;
         
         /// <summary>
         /// add_confirm control.
@@ -472,6 +499,33 @@ namespace School_Management_System.school.sishu_bikas_model_school {
         protected global::System.Web.UI.WebControls.TextBox e_guardian_name;
         
         /// <summary>
+        /// e_contact_no1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox e_contact_no1;
+        
+        /// <summary>
+        /// e_contact_no2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox e_contact_no2;
+        
+        /// <summary>
+        /// e_emailid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox e_emailid;
+        
+        /// <summary>
         /// e_pad_hno control.
         /// </summary>
         /// <remarks>
@@ -598,33 +652,6 @@ namespace School_Management_System.school.sishu_bikas_model_school {
         protected global::System.Web.UI.WebControls.TextBox e_lad_state;
         
         /// <summary>
-        /// e_contact_no1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox e_contact_no1;
-        
-        /// <summary>
-        /// e_contact_no2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox e_contact_no2;
-        
-        /// <summary>
-        /// e_emailid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox e_emailid;
-        
-        /// <summary>
         /// e_admission_date control.
         /// </summary>
         /// <remarks>
@@ -643,22 +670,22 @@ namespace School_Management_System.school.sishu_bikas_model_school {
         protected global::System.Web.UI.WebControls.TextBox e_tc_from;
         
         /// <summary>
-        /// transferred_parameter control.
+        /// e_transferred_parameter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox transferred_parameter;
+        protected global::System.Web.UI.WebControls.CheckBox e_transferred_parameter;
         
         /// <summary>
-        /// transfer_field control.
+        /// e_transfer_field control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel transfer_field;
+        protected global::System.Web.UI.WebControls.Panel e_transfer_field;
         
         /// <summary>
         /// e_tc_to control.
@@ -686,6 +713,24 @@ namespace School_Management_System.school.sishu_bikas_model_school {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox e_note;
+        
+        /// <summary>
+        /// e_x_students_reg_id_label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label e_x_students_reg_id_label;
+        
+        /// <summary>
+        /// e_x_students_reg_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox e_x_students_reg_id;
         
         /// <summary>
         /// update_data control.
