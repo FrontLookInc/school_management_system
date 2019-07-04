@@ -304,8 +304,7 @@ namespace School_Management_System.school.sishu_bikas_model_school
         /*Setting admission date*/
         protected void set_admission_date()
         {
-            DateTime date = DateTime.Now;
-            admission_date.Text = date.ToShortDateString();
+            admission_date.Text = DateTime.Parse(DateTime.Now.ToShortDateString()).ToString("yyyy-MM-dd");
         }
 
         /*Populating caste drop down list*/
@@ -475,7 +474,7 @@ namespace School_Management_System.school.sishu_bikas_model_school
             //admission details
             admission_time = update_time;
             s_admission_dt = admission_time.Date.ToShortDateString();
-            s_admission_tm = admission_time.Date.ToShortTimeString();
+            s_admission_tm = admission_time.TimeOfDay.ToString();
             s_tc_from = tc_from.Text;
             s_note = note.Text;
             if (xstudent_check.Checked)
