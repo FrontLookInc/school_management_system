@@ -18,16 +18,22 @@ namespace School_Management_System.school.sishu_bikas_model_school
         SqlCommand cmd = new SqlCommand("", con);
 
         //send strings
-        string s_student_id,s_name, s_dob, s_gender, s_blood_group, s_religion, s_caste, s_f_name, s_m_name, s_g_name,
-            s_pad_hno, s_pad_area, s_pad_city, s_pad_pin, s_pad_dist, s_pad_state,
-            s_lad_hno, s_lad_area, s_lad_city, s_lad_pin, s_lad_dist, s_lad_state,
-            s_con_no1, s_con_no2, s_emailid, s_admission_dt, s_admission_tm, s_tc_from, s_note, s_x_students_reg_id, s_tc_to, s_tc_date, s_update_time, s_updated_by;
+        string s_student_id = string.Empty, s_name = string.Empty, s_dob = string.Empty, s_gender = string.Empty, s_blood_group = string.Empty, 
+            s_religion = string.Empty, s_caste = string.Empty, s_f_name = string.Empty, s_m_name = string.Empty, s_g_name = string.Empty, 
+            s_pad_hno = string.Empty, s_pad_area = string.Empty, s_pad_city = string.Empty, s_pad_pin = string.Empty, s_pad_dist = string.Empty, 
+            s_pad_state = string.Empty, s_lad_hno = string.Empty, s_lad_area = string.Empty, s_lad_city = string.Empty, s_lad_pin = string.Empty, 
+            s_lad_dist = string.Empty, s_lad_state = string.Empty, s_con_no1 = string.Empty, s_con_no2 = string.Empty, s_emailid = string.Empty, 
+            s_admission_dt = string.Empty, s_admission_tm = string.Empty, s_tc_from = string.Empty, s_note = string.Empty, s_x_students_reg_id = string.Empty, 
+            s_tc = string.Empty, s_tc_to = string.Empty, s_tc_date = string.Empty, s_update_time = string.Empty, s_updated_by = string.Empty;
 
         //get strings
-        string g_name, g_dob, g_gender, g_blood_group, g_religion, g_caste, g_f_name, g_m_name, g_guardian_name,
-            g_pad_hno, g_pad_area, g_pad_city, g_pad_pin, g_pad_dist, g_pad_state,
-            g_lad_hno, g_lad_area, g_lad_city, g_lad_pin, g_lad_dist, g_lad_state,
-            g_con_no1, g_con_no2, g_emailid, g_admission_dt, g_tc_from, g_note, g_x_students_reg_id, g_tc_to, g_tc_date, g_tc, g_update_time, g_updated_by;
+        string g_student_id = string.Empty, g_name = string.Empty, g_dob = string.Empty, g_gender = string.Empty, g_blood_group = string.Empty, 
+            g_religion = string.Empty, g_caste = string.Empty, g_f_name = string.Empty, g_m_name = string.Empty, g_g_name = string.Empty, 
+            g_pad_hno = string.Empty, g_pad_area = string.Empty, g_pad_city = string.Empty, g_pad_pin = string.Empty, g_pad_dist = string.Empty, 
+            g_pad_state = string.Empty, g_lad_hno = string.Empty, g_lad_area = string.Empty, g_lad_city = string.Empty, g_lad_pin = string.Empty, 
+            g_lad_dist = string.Empty, g_lad_state = string.Empty, g_con_no1 = string.Empty, g_con_no2 = string.Empty, g_emailid = string.Empty, 
+            g_admission_dt = string.Empty, g_tc_from = string.Empty, g_note = string.Empty, g_x_students_reg_id = string.Empty, g_tc_to = string.Empty, 
+            g_tc_date = string.Empty, g_tc = string.Empty, g_update_time = string.Empty, g_updated_by = string.Empty;
 
         DateTime admission_time, update_time;
 
@@ -39,7 +45,6 @@ namespace School_Management_System.school.sishu_bikas_model_school
                 onpageload_add();
             }
         }
-
 
         //Add Section
 
@@ -53,6 +58,8 @@ namespace School_Management_System.school.sishu_bikas_model_school
             edit_student.BackColor = System.Drawing.ColorTranslator.FromHtml("#c0c0c0");
             //ClientScript.RegisterStartupScript(this.GetType(), "hash", "location.hash = '#content_show';", true);
             Response.Redirect("manage_students.aspx#content_show");
+            initialize_get_strings();
+            initialize_send_strings();
             //onpageload_add();
         }
 
@@ -173,7 +180,6 @@ namespace School_Management_System.school.sishu_bikas_model_school
         protected void add_confirm_Click(object sender, EventArgs e)
         {
             addsection_duplicate_check_save_data();
-            //addsection_save_data();
         }
 
 
@@ -181,6 +187,29 @@ namespace School_Management_System.school.sishu_bikas_model_school
          * FUNCTIONS FOR IMPLEMENTATION
          */
 
+        /*initialising send strings*/
+        protected void initialize_send_strings()
+        {
+            //send strings
+            s_student_id = string.Empty; s_name = string.Empty; s_dob = string.Empty; s_gender = string.Empty; s_blood_group = string.Empty; s_religion = string.Empty;
+            s_caste = string.Empty; s_f_name = string.Empty; s_m_name = string.Empty; s_g_name = string.Empty; s_pad_hno = string.Empty; s_pad_area = string.Empty;
+            s_pad_city = string.Empty; s_pad_pin = string.Empty; s_pad_dist = string.Empty; s_pad_state = string.Empty; s_lad_hno = string.Empty; s_lad_area = string.Empty;
+            s_lad_city = string.Empty; s_lad_pin = string.Empty; s_lad_dist = string.Empty; s_lad_state = string.Empty; s_con_no1 = string.Empty; s_con_no2 = string.Empty;
+            s_emailid = string.Empty; s_admission_dt = string.Empty; s_admission_tm = string.Empty; s_tc_from = string.Empty; s_note = string.Empty; s_x_students_reg_id = string.Empty;
+            s_tc = string.Empty; s_tc_to = string.Empty; s_tc_date = string.Empty; s_update_time = string.Empty; s_updated_by = string.Empty;
+        }
+
+        /*initialising get strings*/
+        protected void initialize_get_strings()
+        {
+            //get strings
+            string g_student_id = string.Empty; g_name = string.Empty; g_dob = string.Empty; g_gender = string.Empty; g_blood_group = string.Empty; g_religion = string.Empty;
+            g_caste = string.Empty; g_f_name = string.Empty; g_m_name = string.Empty; g_g_name = string.Empty; g_pad_hno = string.Empty; g_pad_area = string.Empty;
+            g_pad_city = string.Empty; g_pad_pin = string.Empty; g_pad_dist = string.Empty; g_pad_state = string.Empty; g_lad_hno = string.Empty; g_lad_area = string.Empty;
+            g_lad_city = string.Empty; g_lad_pin = string.Empty; g_lad_dist = string.Empty; g_lad_state = string.Empty; g_con_no1 = string.Empty; g_con_no2 = string.Empty;
+            g_emailid = string.Empty; g_admission_dt = string.Empty; g_tc_from = string.Empty; g_note = string.Empty; g_x_students_reg_id = string.Empty; g_tc_to = string.Empty;
+            g_tc_date = string.Empty; g_tc = string.Empty; g_update_time = string.Empty; g_updated_by = string.Empty;
+        }
 
         /*Functions to be executed on page load*/
         protected void onpageload_add()
@@ -199,6 +228,7 @@ namespace School_Management_System.school.sishu_bikas_model_school
             get_religion_data();
             get_blood_group_data();
             get_caste_data();
+            set_admission_date();
         }
 
         /*Populating religion drop down list*/
@@ -206,7 +236,7 @@ namespace School_Management_System.school.sishu_bikas_model_school
         {
             ListItem newItem = new ListItem();
             newItem.Text = "-Select Item-";
-            newItem.Value = string.Empty;
+            newItem.Value = "0";
             religion_ddl.Items.Add(newItem);
             try
             {
@@ -241,7 +271,7 @@ namespace School_Management_System.school.sishu_bikas_model_school
         {
             ListItem newItem = new ListItem();
             newItem.Text = "-Select Item-";
-            newItem.Value = string.Empty;
+            newItem.Value = "0";
             blood_group_ddl.Items.Add(newItem);
             try
             {
@@ -271,12 +301,19 @@ namespace School_Management_System.school.sishu_bikas_model_school
             }
         }
 
+        /*Setting admission date*/
+        protected void set_admission_date()
+        {
+            DateTime date = DateTime.Now;
+            admission_date.Text = date.ToShortDateString();
+        }
+
         /*Populating caste drop down list*/
         protected void get_caste_data()
         {
             ListItem newItem = new ListItem();
             newItem.Text = "-Select Item-";
-            newItem.Value = string.Empty;
+            newItem.Value = "0";
             caste_ddl.Items.Add(newItem);
             try
             {
@@ -309,13 +346,14 @@ namespace School_Management_System.school.sishu_bikas_model_school
         /*getting data from form to input strings*/
         protected void get_data_to_s_string()
         {
-            string y = DateTime.Now.Year.ToString();
-            string m = DateTime.Now.Month.ToString();
-            string d = DateTime.Now.Day.ToString();
-            string hr = DateTime.Now.Hour.ToString();
-            string min = DateTime.Now.Minute.ToString();
-            string sec = DateTime.Now.Second.ToString();
-            string milisec = DateTime.Now.Millisecond.ToString();
+            update_time = DateTime.Now;
+            string y = update_time.Year.ToString();
+            string m = update_time.Month.ToString();
+            string d = update_time.Day.ToString();
+            string hr = update_time.Hour.ToString();
+            string min = update_time.Minute.ToString();
+            string sec = update_time.Second.ToString();
+            string milisec = update_time.Millisecond.ToString();
 
             if (m.Length.Equals(1))
             {
@@ -382,7 +420,7 @@ namespace School_Management_System.school.sishu_bikas_model_school
             {
                 s_religion = religion_other.Text;
             }
-            else if (religion_ddl.SelectedItem.Value.Equals(string.Empty))
+            else if (religion_ddl.SelectedItem.Value.Equals("0"))
             {
                 s_religion = string.Empty;
             }
@@ -394,7 +432,7 @@ namespace School_Management_System.school.sishu_bikas_model_school
             {
                 s_blood_group = blood_group_other.Text;
             }
-            else if (blood_group_ddl.SelectedItem.Value.Equals(string.Empty))
+            else if (blood_group_ddl.SelectedItem.Value.Equals("0"))
             {
                 s_blood_group = string.Empty;
             }
@@ -406,7 +444,7 @@ namespace School_Management_System.school.sishu_bikas_model_school
             {
                 s_caste = caste_other.Text;
             }
-            else if (caste_ddl.SelectedItem.Value.Equals(string.Empty))
+            else if (caste_ddl.SelectedItem.Value.Equals("0"))
             {
                 s_caste = string.Empty;
             }
@@ -435,7 +473,7 @@ namespace School_Management_System.school.sishu_bikas_model_school
             s_con_no2 = contact_no2.Text;
             s_emailid = emailid.Text;
             //admission details
-            admission_time = DateTime.Now;
+            admission_time = update_time;
             s_admission_dt = admission_time.Date.ToShortDateString();
             s_admission_tm = admission_time.Date.ToShortTimeString();
             s_tc_from = tc_from.Text;
@@ -444,7 +482,7 @@ namespace School_Management_System.school.sishu_bikas_model_school
             {
                 s_x_students_reg_id = x_students_id.Text;
             }
-            s_update_time = s_admission_dt;
+            s_update_time = update_time.ToString();
             s_updated_by = "admin";
         }
 
@@ -461,21 +499,20 @@ namespace School_Management_System.school.sishu_bikas_model_school
                        "(SELECT * FROM " +
                        "students " +
                        "WHERE " +
-                       "contact_no1='" + contact_no1.Text.ToString().Trim() + "' OR contact_no1 IS NULL OR contact_no1='" + contact_no2.Text.ToString().Trim() +
-                       "' OR contact_no2='" + contact_no1.Text.ToString().Trim() + "' OR contact_no2 IS NULL OR contact_no2='" + contact_no2.Text.ToString().Trim() +
+                       "contact_no1='" + contact_no1.Text.ToString().Trim() + "' OR contact_no1='" + contact_no2.Text.ToString().Trim() +
+                       "' OR contact_no2='" + contact_no1.Text.ToString().Trim() + "' OR contact_no2='" + contact_no2.Text.ToString().Trim() +
                        "' OR father_name='" + father_name.Text.ToString().Trim() + "' OR mother_name='" + mother_name.Text.ToString().Trim() +
                        "' OR guardian_name='" + guardian_name.Text.ToString().Trim() + "' OR guardian_name='" + father_name.Text.ToString().Trim() +
                        "' or guardian_name='" + mother_name.Text.ToString().Trim() + "') a " +
                        "WHERE " +
-                       "a.contact_no1='" + contact_no1.Text.ToString().Trim() + "' OR a.contact_no1 IS NULL OR a.contact_no1='" + contact_no2.Text.ToString().Trim() +
-                       "' OR a.contact_no2='" + contact_no1.Text.ToString().Trim() + "' OR a.contact_no2 IS NULL OR a.contact_no2='" + contact_no2.Text.ToString().Trim() + "') b " +
+                       "a.contact_no1='" + contact_no1.Text.ToString().Trim() + "' OR a.contact_no1='" + contact_no2.Text.ToString().Trim() +
+                       "' OR a.contact_no2='" + contact_no1.Text.ToString().Trim() + "' OR a.contact_no2='" + contact_no2.Text.ToString().Trim() + "') b " +
                        "WHERE " +
                        "b.name = '" + name.Text + "' ";
                     string command2 = "SELECT students_reg_id, name, contact_no1, contact_no2, dob FROM students WHERE name='" + name.Text + "' AND dob='" + dob.Text.ToString().Trim() +
                         "' AND (contact_no1='" + contact_no1.Text.ToString().Trim() + "' OR contact_no1='" + contact_no2.Text.ToString().Trim() +
                          "' OR contact_no2='" + contact_no1.Text.ToString().Trim() + "'  OR contact_no2='" + contact_no2.Text.ToString().Trim() + "') AND tc = 0";
                     cmd.CommandText = command2;
-                    /* cmd.CommandText = command2*/
                     con.Open();
                     myreader = cmd.ExecuteReader();
                     int row_count = 0;
@@ -563,70 +600,70 @@ namespace School_Management_System.school.sishu_bikas_model_school
             myreader.Close();
             con.Close();
             get_data_to_s_string();
+            string x_id = s_x_students_reg_id;
 
             string command1 = "INSERT INTO students (students_reg_id,name,dob,gender,blood_group,religion,caste,father_name,mother_name,guardian_name," +
                 "p_address_hno,p_address_area,p_address_city,p_address_pin,p_address_dist,p_address_state," +
                 "l_address_hno,l_address_area,l_address_city,l_address_pin,l_address_dist,l_address_state," +
                 "contact_no1,contact_no2,email_id," +
-                "admission_date,admission_time,tc_from,note,tc,x_students_reg_id,update_time,updated_by) " +
+                "admission_date,admission_time,tc_from,note,tc,x_students_reg_id,update_time,updated_by,obsolate) " +
                 "VALUES('" + s_student_id + "','" + s_name + "','" + s_dob + "','" + s_gender + "','" + s_blood_group + "','"
                 + s_religion + "','" + s_caste + "','" + s_f_name + "','" + s_m_name + "','" + s_g_name + "','"
                 + s_pad_hno + "','" + s_pad_area + "','" + s_pad_city + "','" + s_pad_pin + "','" + s_pad_dist + "','" + s_pad_state + "','"
                 + s_lad_hno + "','" + s_lad_area + "','" + s_lad_city + "','" + s_lad_pin + "','" + s_lad_dist + "','" + s_lad_state + "','"
                 + s_con_no1 + "','" + s_con_no2 + "','" + s_emailid + "','"
                 + s_admission_dt + "','" + s_admission_tm + "','" + s_tc_from + "','" + s_note + "','" + 0 + "','" + s_x_students_reg_id + "','" 
-                + s_update_time + "','" + s_updated_by + "')";
+                + s_update_time + "','" + s_updated_by + "','" + 0 + "')";
 
             string command2 = "INSERT INTO students (students_reg_id,name,dob,gender,blood_group,religion,caste,father_name,mother_name,guardian_name," +
                 "p_address_hno,p_address_area,p_address_city,p_address_pin,p_address_dist,p_address_state," +
                 "l_address_hno,l_address_area,l_address_city,l_address_pin,l_address_dist,l_address_state," +
                 "contact_no1,contact_no2,email_id," +
-                "admission_date,admission_time,tc_from,note,tc,update_time,updated_by) " +
+                "admission_date,admission_time,tc_from,note,tc,update_time,updated_by,obsolate) " +
                 "VALUES('" + s_student_id + "','" + s_name + "','" + s_dob + "','" + s_gender + "','" + s_blood_group + "','"
                 + s_religion + "','" + s_caste + "','" + s_f_name + "','" + s_m_name + "','" + s_g_name + "','"
                 + s_pad_hno + "','" + s_pad_area + "','" + s_pad_city + "','" + s_pad_pin + "','" + s_pad_dist + "','" + s_pad_state + "','"
                 + s_lad_hno + "','" + s_lad_area + "','" + s_lad_city + "','" + s_lad_pin + "','" + s_lad_dist + "','" + s_lad_state + "','"
                 + s_con_no1 + "','" + s_con_no2 + "','" + s_emailid + "','"
-                + s_admission_dt + "','" + s_admission_tm + "','" + s_tc_from + "','" + s_note + "','" + 0 + "','" + s_update_time + "','" + s_updated_by + "')";
+                + s_admission_dt + "','" + s_admission_tm + "','" + s_tc_from + "','" + s_note + "','" + 0 + "','" + s_update_time + "','" + s_updated_by + "','" + 0 + "')";
 
             string command3 = "SELECT students_reg_id FROM students WHERE name='" + s_name + "' AND contact_no1='" + s_con_no1 + "' AND contact_no2='" + s_con_no2 + "' " +
-                        "AND father_name='" + s_f_name + "' AND mother_name='" + s_m_name + "' AND guardian_name='" + s_g_name + "'";
+                        "AND father_name='" + s_f_name + "' AND mother_name='" + s_m_name + "' AND guardian_name='" + s_g_name + "' AND tc = '"+false+ "' AND obsolate = '" + false + "'";
 
-            string command4 = "UPDATE students " +
-                "set " +
-                "obsolate=1" +
-                "WHERE" +
-                "students_reg_id='" + s_x_students_reg_id + "'";
+            string command4 = "UPDATE students SET " +
+            "obsolate=1" + 
+            "WHERE " +
+            "students_reg_id='" + x_id + "'";
+            int r = 0;
 
             if (xstudent_check.Checked)
             {
                 cmd.CommandText = command1;
                 con.Open();
-                int r = cmd.ExecuteNonQuery();
+                r = cmd.ExecuteNonQuery();
                 con.Close();
                 if (r.Equals(1))
                 {
+                    con.Close();
                     cmd.CommandText = command4;
                     con.Open();
                     int s = cmd.ExecuteNonQuery();
                     con.Close();
                     if (s.Equals(1))
                     {
+                        con.Close();
                         cmd.CommandText = command3;
                         con.Open();
-
                         myreader = cmd.ExecuteReader();
-                        if (myreader.HasRows && !myreader.IsClosed)
+                        if (myreader.HasRows)
                         {
                             string x = "";
                             while (myreader.Read())
                             {
                                 x = myreader["students_reg_id"].ToString();
                             }
-                            con.Close();
                             Response.Write("<script language='javascript'>" +
-                           "window.alert('Data Saved Successfully with Student Registration Number:" + x + " ');" +
-                           "window.location='../sishu_bikas_model_school/manage_students#content_show.aspx';" +
+                           "window.alert('Data Saved Successfully with Student Registration Number:" + x + ".');" +
                            "</script>");
                         }
                         else if (myreader.IsClosed)
@@ -635,20 +672,30 @@ namespace School_Management_System.school.sishu_bikas_model_school
                                "window.alert('Reader Is closed..!!! Report Error');" +
                                "</script>");
                         }
+                        /*
+                        Response.Write("<script language='javascript'>" +
+                        "window.alert('Student Data With Id:" + x_id + " is now obsolate..!! ');" +
+                        "window.location='../sishu_bikas_model_school/manage_students#content_show.aspx';" +
+                        "</script>");
+                        */
+                    }
+                    else
+                    {
+                        Response.Write("<script language='javascript'>" +
+                       "window.alert('Student Data With Id:" + x_id + " Could not be updated..!! Something went wrong..!! ');" +
+                       "</script>");
                     }
                 }
-               
             }
             else
             {
+                con.Close();
                 cmd.CommandText = command2;
                 con.Open();
-                int r = cmd.ExecuteNonQuery();
+                int s = cmd.ExecuteNonQuery();
                 con.Close();
-                if (r.Equals(1))
+                if (s.Equals(1))
                 {
-                    /*cmd.CommandText = "SELECT students_reg_id FROM students WHERE name='" + s_name + "' AND contact_no1='" + s_con_no1 + "' AND contact_no2='" + s_con_no2 + "' " +
-                        "AND father_name='" + s_f_name + "' AND mother_name='" + s_m_name + "' AND guardian_name='" + s_g_name + "'";*/
                     cmd.CommandText = command3;
                     con.Open();
 
@@ -674,6 +721,8 @@ namespace School_Management_System.school.sishu_bikas_model_school
                     }
                 }
             }
+            initialize_send_strings();
+            initialize_get_strings();
         }
 
         /*Checking if the applicant is an ex student of the school*/
@@ -860,6 +909,8 @@ namespace School_Management_System.school.sishu_bikas_model_school
             edit_student.BackColor = System.Drawing.ColorTranslator.FromHtml("#0066FF");
             ClientScript.RegisterStartupScript(this.GetType(), "hash", "location.hash = '#content_show';", true);
             onpageload_edit();
+            initialize_get_strings();
+            initialize_send_strings();
         }
 
         protected void e_id_ddl_SelectedIndexChanged(object sender, EventArgs e)
@@ -987,6 +1038,27 @@ namespace School_Management_System.school.sishu_bikas_model_school
             }
         }
 
+        protected void e_transferred_parameter_CheckedChanged(object sender, EventArgs e)
+        {
+            e_transfer_field.Visible = e_transferred_parameter.Checked;
+        }
+
+        protected void e_xstudent_check_CheckedChanged(object sender, EventArgs e)
+        {
+            e_x_students_reg_id.Visible = e_xstudent_check.Checked;
+            e_x_students_reg_id_label.Visible = e_xstudent_check.Checked;
+        }
+
+        protected void update_data_Click(object sender, EventArgs e)
+        {
+            update_student_details();
+        }
+
+        protected void delete_data_Click(object sender, EventArgs e)
+        {
+            delete_student();
+        }
+
         /*
          * 
          * FUNCTIONS FOR IMPLEMENTATION
@@ -1015,7 +1087,7 @@ namespace School_Management_System.school.sishu_bikas_model_school
             string spaces = Server.HtmlDecode("&nbsp;&nbsp;&nbsp;&nbsp;");
             ListItem newItem = new ListItem();
             newItem.Text = "-Select Student Registration Id-";
-            newItem.Value = string.Empty;
+            newItem.Value = "0";
             e_id_ddl.Items.Add(newItem);
             try
             {
@@ -1046,7 +1118,7 @@ namespace School_Management_System.school.sishu_bikas_model_school
         {
             ListItem newItem = new ListItem();
             newItem.Text = "-Select Item-";
-            newItem.Value = string.Empty;
+            newItem.Value = "0";
             e_religion_ddl.Items.Add(newItem);
             try
             {
@@ -1081,7 +1153,7 @@ namespace School_Management_System.school.sishu_bikas_model_school
         {
             ListItem newItem = new ListItem();
             newItem.Text = "-Select Item-";
-            newItem.Value = string.Empty;
+            newItem.Value = "0";
             e_blood_group_ddl.Items.Add(newItem);
             try
             {
@@ -1116,7 +1188,7 @@ namespace School_Management_System.school.sishu_bikas_model_school
         {
             ListItem newItem = new ListItem();
             newItem.Text = "-Select Item-";
-            newItem.Value = string.Empty;
+            newItem.Value = "0";
             e_caste_ddl.Items.Add(newItem);
             try
             {
@@ -1146,64 +1218,155 @@ namespace School_Management_System.school.sishu_bikas_model_school
             }
         }
 
+        /*Setting strings to default empty*/
+        protected void set_strings_to_defaul_empty()
+        {
+            g_name = string.Empty;
+            g_religion = "0";
+            g_gender = "0";
+            g_blood_group = "0";
+            g_caste = "0";
+            g_dob = DateTime.Parse(DateTime.Now.ToShortDateString()).ToString("yyyy-MM-dd");
+            g_f_name = string.Empty;
+            g_m_name = string.Empty;
+            g_g_name = string.Empty;
+            //permanent address
+            g_pad_hno = string.Empty;
+            g_pad_area = string.Empty;
+            g_pad_city = string.Empty;
+            g_pad_pin = string.Empty;
+            g_pad_dist = string.Empty;
+            g_pad_state = string.Empty;
+            //local address
+            g_lad_hno = string.Empty;
+            g_lad_area = string.Empty;
+            g_lad_city = string.Empty;
+            g_lad_pin = string.Empty;
+            g_lad_dist = string.Empty;
+            g_lad_state = string.Empty;
+            //contact details
+            g_con_no1 = string.Empty;
+            g_con_no2 = string.Empty;
+            g_emailid = string.Empty;
+            //addmission details
+            g_admission_dt = DateTime.Parse(DateTime.Now.ToShortDateString()).ToString("yyyy-MM-dd");
+            g_tc_from = string.Empty;
+            g_note = string.Empty;
+            g_tc_to = string.Empty;
+            g_tc_date = DateTime.Parse(DateTime.Now.ToShortDateString()).ToString("yyyy-MM-dd");
+            g_tc = "false";
+            g_x_students_reg_id = string.Empty;
+
+            //modifier details
+            g_update_time = DateTime.Now.ToShortDateString();
+            g_updated_by = string.Empty;
+
+            get_data_to_page();
+        }
+
         /*On Student Id Selection Fetching Data to Strings Related to that students*/
         protected void on_id_ddl_select_fetch_data()
         {
-            if (!e_id_ddl.SelectedItem.Value.Equals(string.Empty)||!e_id_ddl.SelectedItem.Value.Equals(null))
+            if (!e_id_ddl.SelectedItem.Value.Equals("0"))
             {
-                cmd.CommandText = "SELECT * FROM students WHERE students_reg_id='" + e_id_ddl.SelectedItem.Value.ToString() + "'";
-                con.Open();
-                myreader = cmd.ExecuteReader();
-                if (myreader.HasRows)
-                {
-                    
-                    while (myreader.Read())
-                    {
-                        //Basic Info
-                        g_name = myreader["name"].ToString();
-                        g_religion=myreader["religion"].ToString();
-                        g_gender=myreader["gender"].ToString();
-                        g_blood_group=myreader["blood_group"].ToString();
-                        g_caste=myreader["caste"].ToString();
-                        g_dob = myreader["dob"].ToString();
-                        g_f_name = myreader["father_name"].ToString();
-                        g_m_name = myreader["mother_name"].ToString();
-                        g_guardian_name = myreader["guardian_name"].ToString();
-                        //permanent address
-                        g_pad_hno= myreader["p_address_hno"].ToString();
-                        g_pad_area = myreader["p_address_area"].ToString();
-                        g_pad_city = myreader["p_address_city"].ToString();
-                        g_pad_pin = myreader["p_address_pin"].ToString();
-                        g_pad_dist = myreader["p_address_dist"].ToString();
-                        g_pad_state = myreader["p_address_state"].ToString();
-                        //local address
-                        g_lad_hno = myreader["l_address_hno"].ToString();
-                        g_lad_area = myreader["l_address_area"].ToString();
-                        g_lad_city = myreader["l_address_city"].ToString();
-                        g_lad_pin = myreader["l_address_pin"].ToString();
-                        g_lad_dist = myreader["l_address_dist"].ToString();
-                        g_lad_state = myreader["l_address_state"].ToString();
-                        //contact details
-                        g_con_no1 = myreader["contact_no1"].ToString();
-                        g_con_no2 = myreader["contact_no2"].ToString();
-                        g_emailid = myreader["email_id"].ToString();
-                        //addmission details
-                        g_admission_dt = myreader["admission_date"].ToString();
-                        g_tc_from = myreader["tc_from"].ToString();
-                        g_note = myreader["note"].ToString();
-                        g_tc_to = myreader["tc_to"].ToString();
-                        g_tc_date = myreader["tc_date"].ToString();
-                        g_tc = myreader["tc"].ToString();
-                        g_x_students_reg_id = myreader["x_students_reg_id"].ToString();
-
-                        //modifier details
-                        g_update_time = myreader["update_time"].ToString();
-                        g_updated_by = myreader["updated_by"].ToString();
-                    }
-                }
-                con.Close();
-                get_data_to_page();
+                string student_id = e_id_ddl.SelectedItem.Value.ToString();
+                fetch_student_data(student_id);
             }
+            else
+            {
+                set_strings_to_defaul_empty();
+            }
+        }
+
+        /*fetching individual data in edit section*/
+        protected void fetch_student_data(string student_id)
+        {
+            g_student_id = student_id;
+            cmd.CommandText = "SELECT * FROM students WHERE students_reg_id='" + g_student_id + "'";
+            con.Open();
+            myreader = cmd.ExecuteReader();
+            if (myreader.HasRows)
+            {
+
+                while (myreader.Read())
+                {
+                    //Basic Info
+                    g_name = myreader["name"].ToString();
+                    g_religion = myreader["religion"].ToString();
+                    g_gender = myreader["gender"].ToString();
+                    g_blood_group = myreader["blood_group"].ToString();
+                    g_caste = myreader["caste"].ToString();
+                    if (myreader["dob"].ToString().Equals(null) || myreader["dob"].ToString().Equals(string.Empty))
+                    {
+                        g_dob = DateTime.Parse(DateTime.Now.ToShortDateString()).ToString("yyyy-MM-dd");
+                    }
+                    else
+                    {
+                        g_dob = DateTime.Parse(myreader["dob"].ToString()).ToString("yyyy-MM-dd");
+                    }
+                    g_f_name = myreader["father_name"].ToString();
+                    g_m_name = myreader["mother_name"].ToString();
+                    g_g_name = myreader["guardian_name"].ToString();
+                    //permanent address
+                    g_pad_hno = myreader["p_address_hno"].ToString();
+                    g_pad_area = myreader["p_address_area"].ToString();
+                    g_pad_city = myreader["p_address_city"].ToString();
+                    g_pad_pin = myreader["p_address_pin"].ToString();
+                    g_pad_dist = myreader["p_address_dist"].ToString();
+                    g_pad_state = myreader["p_address_state"].ToString();
+                    //local address
+                    g_lad_hno = myreader["l_address_hno"].ToString();
+                    g_lad_area = myreader["l_address_area"].ToString();
+                    g_lad_city = myreader["l_address_city"].ToString();
+                    g_lad_pin = myreader["l_address_pin"].ToString();
+                    g_lad_dist = myreader["l_address_dist"].ToString();
+                    g_lad_state = myreader["l_address_state"].ToString();
+                    //contact details
+                    g_con_no1 = myreader["contact_no1"].ToString();
+                    g_con_no2 = myreader["contact_no2"].ToString();
+                    g_emailid = myreader["email_id"].ToString();
+                    //addmission details
+                    g_admission_dt = DateTime.Parse(myreader["admission_date"].ToString()).ToString("yyyy-MM-dd");
+                    g_tc_from = myreader["tc_from"].ToString();
+                    g_note = myreader["note"].ToString();
+                    g_tc = Boolean.Parse(myreader["tc"].ToString()).ToString();
+                    g_tc_to = myreader["tc_to"].ToString();
+                    if (myreader["tc_date"].ToString().Equals(null) || myreader["tc_date"].ToString().Equals(string.Empty))
+                    {
+                        g_tc_date = DateTime.Parse(DateTime.Now.ToShortDateString()).ToString("yyyy-MM-dd");
+                    }
+                    else
+                    {
+                        g_tc_date = DateTime.Parse(myreader["tc_date"].ToString()).ToString("yyyy-MM-dd");
+                    }
+                    g_tc = myreader["tc"].ToString();
+                    g_x_students_reg_id = myreader["x_students_reg_id"].ToString();
+
+                    //modifier details
+                    if (myreader["update_time"].ToString().Equals(null) || myreader["update_time"].ToString().Equals(string.Empty))
+                    {
+                        g_update_time = DateTime.Parse(DateTime.Now.ToShortDateString()).ToString("yyyy-MM-dd");
+                    }
+                    else
+                    {
+                        g_update_time = DateTime.Parse(myreader["update_time"].ToString()).ToString("yyyy-MM-dd");
+                    }
+                    g_updated_by = myreader["updated_by"].ToString();
+                }
+            }
+            con.Close();
+            get_data_to_page();
+        }
+
+        /*Clearing Data From Edit Page*/
+        protected void clear_page_data()
+        {
+            e_gender_ddl.ClearSelection();
+            e_religion_ddl.ClearSelection();
+            e_blood_group_ddl.ClearSelection();
+            e_caste_ddl.ClearSelection();
+            onpageload_edit();
+            set_strings_to_defaul_empty();
         }
 
         /*Loading Data to form from strings*/
@@ -1216,14 +1379,14 @@ namespace School_Management_System.school.sishu_bikas_model_school
             
             //Basic Info
             e_name.Text = g_name;
-            e_religion_ddl.Items.FindByText(g_religion).Selected = true;
-            e_gender_ddl.Items.FindByText(g_gender).Selected = true;
-            e_blood_group_ddl.Items.FindByText(g_blood_group).Selected = true;
-            e_caste_ddl.Items.FindByText(g_caste).Selected = true;
-            e_dob.Text = DateTime.Parse(g_dob).ToString("yyyy-MM-dd");
+            e_religion_ddl.Items.FindByValue(g_religion).Selected = true;
+            e_gender_ddl.Items.FindByValue(g_gender).Selected = true;
+            e_blood_group_ddl.Items.FindByValue(g_blood_group).Selected = true;
+            e_caste_ddl.Items.FindByValue(g_caste).Selected = true;
+            e_dob.Text = g_dob;
             e_father_name.Text = g_f_name;
             e_mother_name.Text = g_m_name;
-            e_guardian_name.Text = g_guardian_name;
+            e_guardian_name.Text = g_g_name;
 
             //permanent address
             e_pad_hno.Text = g_pad_hno;
@@ -1242,15 +1405,45 @@ namespace School_Management_System.school.sishu_bikas_model_school
             e_lad_state.Text = g_lad_state;
 
             if (g_pad_hno.Equals(g_lad_hno) && g_pad_area.Equals(g_lad_area) && g_pad_city.Equals(g_lad_city) && 
-                g_pad_pin.Equals(g_lad_pin) && g_pad_dist.Equals(g_lad_dist) && g_pad_state.Equals(g_lad_state))
+                g_pad_pin.Equals(g_lad_pin) && g_pad_dist.Equals(g_lad_dist) && g_pad_state.Equals(g_lad_state) &&
+                !g_pad_hno.Equals(string.Empty) && !g_pad_area.Equals(string.Empty) && !g_pad_city.Equals(string.Empty) &&
+                !g_pad_pin.Equals(string.Empty) && !g_pad_dist.Equals(string.Empty) && !g_pad_state.Equals(string.Empty))
             {
                 e_pad_to_lad_sync.Checked = true;
                 e_instructon_for_pad_to_lad_sync.Visible = true;
+
+                e_pad_hno.ReadOnly = true;
+                e_pad_area.ReadOnly = true;
+                e_pad_city.ReadOnly = true;
+                e_pad_pin.ReadOnly = true;
+                e_pad_district.ReadOnly = true;
+                e_pad_state.ReadOnly = true;
+
+                e_lad_hno.ReadOnly = true;
+                e_lad_area.ReadOnly = true;
+                e_lad_city.ReadOnly = true;
+                e_lad_pin.ReadOnly = true;
+                e_lad_district.ReadOnly = true;
+                e_lad_state.ReadOnly = true;
             }
             else
             {
                 e_pad_to_lad_sync.Checked = false;
                 e_instructon_for_pad_to_lad_sync.Visible = false;
+
+                e_pad_hno.ReadOnly = false;
+                e_pad_area.ReadOnly = false;
+                e_pad_city.ReadOnly = false;
+                e_pad_pin.ReadOnly = false;
+                e_pad_district.ReadOnly = false;
+                e_pad_state.ReadOnly = false;
+
+                e_lad_hno.ReadOnly = false;
+                e_lad_area.ReadOnly = false;
+                e_lad_city.ReadOnly = false;
+                e_lad_pin.ReadOnly = false;
+                e_lad_district.ReadOnly = false;
+                e_lad_state.ReadOnly = false;
             }
 
             //contact details
@@ -1259,27 +1452,52 @@ namespace School_Management_System.school.sishu_bikas_model_school
             e_emailid.Text = g_emailid;
 
             //addmission details
-            e_admission_date.Text = DateTime.Parse(g_admission_dt).ToString("yyyy-MM-dd");
+            e_admission_date.Text = g_admission_dt;
             e_tc_from.Text = g_tc_from;
             e_note.Text = g_note;
-
-            e_x_students_reg_id.Visible = g_x_students_reg_id.Equals(null) || g_x_students_reg_id.Equals(string.Empty);
+            e_xstudent_check.Checked = !g_x_students_reg_id.Equals(string.Empty);
+            e_x_students_reg_id.Visible = !g_x_students_reg_id.Equals(string.Empty);
             e_x_students_reg_id.Text = g_x_students_reg_id;
 
-            if (Boolean.Parse(g_tc))
+            e_transferred_parameter.Checked = Boolean.Parse(g_tc);
+            e_transfer_field.Visible = Boolean.Parse(g_tc);
+            e_tc_to.Text = g_tc_to;
+            e_tc_date.Text = g_tc_date;
+        }
+
+        /*Delete student function*/
+        protected void delete_student()
+        {
+            string id_for_delete = e_id_ddl.SelectedItem.Value;
+            string command1 = "DELETE FROM students WHERE students_reg_id = '"+id_for_delete+"'";
+            cmd.CommandText = command1;
+            try
             {
-                e_transferred_parameter.Checked = Boolean.Parse(g_tc);
-                e_transfer_field.Visible = Boolean.Parse(g_tc);
-            }
-            else
-            {
-                e_transferred_parameter.Checked = Boolean.Parse(g_tc);
-                e_transfer_field.Visible = Boolean.Parse(g_tc);
-                e_tc_to.Text = g_tc_to;
-                if (!g_tc_date.Equals(string.Empty))
+                con.Close();
+                con.Open();
+                int r = cmd.ExecuteNonQuery();
+                con.Close();
+                if (r.Equals(1))
                 {
-                    e_tc_date.Text = DateTime.Parse(g_tc_date).ToString("yyyy-MM-dd");
+                    string x = e_id_ddl.SelectedItem.Value;
+                    clear_page_data();
+                    Response.Write("<script language='javascript'>" +
+                               "window.alert('Data with Student Registration Number:" + x + " has been deleted successfully..!!');" +
+                               "window.location='../sishu_bikas_model_school/manage_students#content_show.aspx';" +
+                               "</script>");
                 }
+                else
+                {
+                    Response.Write("<script language='javascript'>" +
+                               "window.alert('Something went wrong while deleting data..!! Call For Support..!!');" +
+                               "</script>");
+                }
+            }
+            catch (Exception delete_student_error)
+            {
+                Response.Write("<script language='javascript'>" +
+                               "window.alert('Something went wrong while deleting data..!! Call For Support..!!\\n Error Message: "+delete_student_error.Message+"');" +
+                               "</script>");
             }
         }
 
@@ -1391,11 +1609,253 @@ namespace School_Management_System.school.sishu_bikas_model_school
                 e_pad_state.Focus();
                 return false;
             }
+            else if (Boolean.Parse(s_tc))
+            {
+                if (s_tc_date.Equals(string.Empty))
+                {
+                    Response.Write("<script language='javascript'>" +
+                       "window.alert('TC Date Cannot Be empty..!!"+e_tc_date.Text+"');" +
+                       "</script>");
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
             else
             {
                 return true;
             }
         }
 
+        /*getting data from form to input strings for edit*/
+        protected void e_get_data_to_s_string()
+        {
+            //basic details
+            s_student_id = e_id_ddl.SelectedItem.Value;
+            s_name = e_name.Text;
+            s_gender = e_gender_ddl.SelectedItem.Text;
+            s_dob = e_dob.Text;
+            s_f_name = e_father_name.Text;
+            s_m_name = e_mother_name.Text;
+            s_g_name = e_guardian_name.Text;
+            if (e_religion_ddl.SelectedItem.Text.Equals("Others"))
+            {
+                s_religion = e_religion_other.Text;
+            }
+            else if (e_religion_ddl.SelectedItem.Value.Equals("0"))
+            {
+                s_religion = string.Empty;
+            }
+            else
+            {
+                s_religion = e_religion_ddl.SelectedItem.Text;
+            }
+            if (e_blood_group_ddl.SelectedItem.Text.Equals("Others"))
+            {
+                s_blood_group = e_blood_group_other.Text;
+            }
+            else if (e_blood_group_ddl.SelectedItem.Value.Equals("0"))
+            {
+                s_blood_group = string.Empty;
+            }
+            else
+            {
+                s_blood_group = e_blood_group_ddl.SelectedItem.Text;
+            }
+            if (e_caste_ddl.SelectedItem.Text.Equals("Others"))
+            {
+                s_caste = e_caste_other.Text;
+            }
+            else if (e_caste_ddl.SelectedItem.Value.Equals("0"))
+            {
+                s_caste = string.Empty;
+            }
+            else
+            {
+                s_caste = e_caste_ddl.SelectedItem.Text;
+            }
+
+            //address details
+            //permanent address
+            s_pad_hno = e_pad_hno.Text;
+            s_pad_area = e_pad_area.Text;
+            s_pad_city = e_pad_city.Text;
+            s_pad_pin = e_pad_pin.Text;
+            s_pad_dist = e_pad_district.Text;
+            s_pad_state = e_pad_state.Text;
+            //local addess
+            s_lad_hno = e_lad_hno.Text;
+            s_lad_area = e_lad_area.Text;
+            s_lad_city = e_lad_city.Text;
+            s_lad_pin = e_lad_pin.Text;
+            s_lad_dist = e_lad_district.Text;
+            s_lad_state = e_lad_state.Text;
+            //contact details
+            s_con_no1 = e_contact_no1.Text;
+            s_con_no2 = e_contact_no2.Text;
+            s_emailid = e_emailid.Text;
+            //admission details
+            //this portion is not for editing.
+            /*
+            admission_time = DateTime.Parse(e_admission_date.Text);
+            s_admission_dt = admission_time.Date.ToShortDateString();
+            s_admission_tm = admission_time.Date.ToShortTimeString();
+            s_tc_from = tc_from.Text;*/
+            if (e_transferred_parameter.Checked.Equals(true))
+            {
+                s_tc = true.ToString();
+                s_tc_to = e_tc_to.Text;
+                //s_tc_date = string.Empty;
+                s_tc_date = e_tc_date.Text;
+            }
+            else
+            {
+                s_tc = false.ToString();
+            }
+
+            s_note = e_note.Text;
+            if (e_xstudent_check.Checked)
+            {
+                s_x_students_reg_id = e_x_students_reg_id.Text;
+            }
+            else
+            {
+                s_x_students_reg_id = string.Empty;
+            }
+            s_update_time = DateTime.Now.ToString();
+            s_updated_by = "admin";
+        }
+
+        /*Comparing data with new data*/
+        protected Boolean data_comparison()
+        {
+            if (s_student_id.Equals(g_student_id) && s_name.Equals(g_name) && s_dob.Equals(g_dob) && s_gender.Equals(g_gender) && s_blood_group.Equals(g_blood_group) &&
+                s_religion.Equals(g_religion) && s_caste.Equals(g_caste) && s_f_name.Equals(g_f_name) && s_m_name.Equals(g_m_name) && s_g_name.Equals(g_g_name) &&
+                s_pad_hno.Equals(g_pad_hno) && s_pad_area.Equals(g_pad_area) && s_pad_city.Equals(g_pad_city) && s_pad_pin.Equals(g_pad_pin) && s_pad_dist.Equals(g_pad_dist) &&
+                s_pad_state.Equals(g_pad_state) && s_lad_hno.Equals(g_lad_hno) && s_lad_area.Equals(g_lad_area) && s_lad_city.Equals(g_lad_city) && s_lad_pin.Equals(g_lad_pin) &&
+                s_lad_dist.Equals(g_lad_dist) && s_lad_state.Equals(g_lad_state) && s_con_no1.Equals(g_con_no1) && s_con_no2.Equals(g_con_no2) && s_emailid.Equals(g_emailid) &&
+                s_tc_from.Equals(g_tc_from) && s_note.Equals(g_note) && s_x_students_reg_id.Equals(g_x_students_reg_id) && s_tc.Equals(g_tc) && s_tc_date.Equals(g_tc_date) &&
+                s_tc_to.Equals(g_tc_to) && s_tc_date.Equals(g_tc_date))
+            {
+                Response.Write("<script language='javascript'>" +
+                       "window.alert('Can Not Update Data As Nothing Has Changed..!!');" +
+                       "</script>");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        /*Update data*/
+        protected void update_student_details()
+        {
+            e_get_data_to_s_string();
+
+            string command1 = "UPDATE students SET " +
+            "name='" + s_name + "', dob='" + s_dob + "', gender='" + s_gender + "', blood_group='" + s_blood_group + "', " +
+            "religion='" + s_religion + "', caste='" + s_caste + "', father_name='" + s_f_name + "', mother_name='" + s_m_name + "', guardian_name='" + s_g_name + "', " +
+            "p_address_hno='" + s_pad_hno + "', p_address_area='" + s_pad_area + "', p_address_city='" + s_pad_city + "', " +
+            "p_address_pin='" + s_pad_pin + "', p_address_dist='" + s_pad_dist + "', p_address_state='" + s_pad_state + "', " +
+            "l_address_hno='" + s_lad_hno + "', l_address_area='" + s_lad_area + "', l_address_city='" + s_lad_city + "', " +
+            "l_address_pin='" + s_lad_pin + "', l_address_dist='" + s_lad_dist + "', l_address_state='" + s_lad_state + "', " +
+            "contact_no1='" + s_con_no1 + "', contact_no2='" + s_con_no2 + "', email_id='" + s_emailid + "', tc_from='" + s_tc_from + "', " +
+            "note='" + s_note + "', tc='" + s_tc + "', tc_to='" + s_tc_to + "', tc_date='" + s_tc_date + "', " +
+            "update_time='" + s_update_time + "', updated_by='" + s_updated_by + "' " +
+            "WHERE " +
+            "students_reg_id='" + s_student_id + "'";
+
+            string command2 = "UPDATE students SET " +
+            "name='" + s_name + "', dob='" + s_dob + "', gender='" + s_gender + "', blood_group='" + s_blood_group + "', " +
+            "religion='" + s_religion + "', caste='" + s_caste + "', father_name='" + s_f_name + "', mother_name='" + s_m_name + "', guardian_name='" + s_g_name + "', " +
+            "p_address_hno='" + s_pad_hno + "', p_address_area='" + s_pad_area + "', p_address_city='" + s_pad_city + "', " +
+            "p_address_pin='" + s_pad_pin + "', p_address_dist='" + s_pad_dist + "', p_address_state='" + s_pad_state + "', " +
+            "l_address_hno='" + s_lad_hno + "', l_address_area='" + s_lad_area + "', l_address_city='" + s_lad_city + "', " +
+            "l_address_pin='" + s_lad_pin + "', l_address_dist='" + s_lad_dist + "', l_address_state='" + s_lad_state + "', " +
+            "contact_no1='" + s_con_no1 + "', contact_no2='" + s_con_no2 + "', email_id='" + s_emailid + "', tc_from='" + s_tc_from + "', " +
+            "note='" + s_note + "', x_students_reg_id='" + s_x_students_reg_id + "', tc='" + s_tc + "', tc_to='" + s_tc_to + "', tc_date='" + s_tc_date + "', " +
+            "update_time='" + s_update_time + "', updated_by='" + s_updated_by + "' " +
+            "WHERE " +
+            "students_reg_id='" + s_student_id + "'";
+
+            string command3 = "UPDATE students SET " +
+            "name='" + s_name + "', dob='" + s_dob + "', gender='" + s_gender + "', blood_group='" + s_blood_group + "', " +
+            "religion='" + s_religion + "', caste='" + s_caste + "', father_name='" + s_f_name + "', mother_name='" + s_m_name + "', guardian_name='" + s_g_name + "', " +
+            "p_address_hno='" + s_pad_hno + "', p_address_area='" + s_pad_area + "', p_address_city='" + s_pad_city + "', " +
+            "p_address_pin='" + s_pad_pin + "', p_address_dist='" + s_pad_dist + "', p_address_state='" + s_pad_state + "', " +
+            "l_address_hno='" + s_lad_hno + "', l_address_area='" + s_lad_area + "', l_address_city='" + s_lad_city + "', " +
+            "l_address_pin='" + s_lad_pin + "', l_address_dist='" + s_lad_dist + "', l_address_state='" + s_lad_state + "', " +
+            "contact_no1='" + s_con_no1 + "', contact_no2='" + s_con_no2 + "', email_id='" + s_emailid + "', tc_from='" + s_tc_from + "', " +
+            "note='" + s_note + "', x_students_reg_id='" + s_x_students_reg_id + "', update_time='" + s_update_time + "', updated_by='" + s_updated_by + "' " +
+            "WHERE " +
+            "students_reg_id='" + s_student_id + "'";
+
+            string command4 = "UPDATE students SET " +
+            "name='" + s_name + "', dob='" + s_dob + "', gender='" + s_gender + "', blood_group='" + s_blood_group + "', " +
+            "religion='" + s_religion + "', caste='" + s_caste + "', father_name='" + s_f_name + "', mother_name='" + s_m_name + "', guardian_name='" + s_g_name + "', " +
+            "p_address_hno='" + s_pad_hno + "', p_address_area='" + s_pad_area + "', p_address_city='" + s_pad_city + "', " +
+            "p_address_pin='" + s_pad_pin + "', p_address_dist='" + s_pad_dist + "', p_address_state='" + s_pad_state + "', " +
+            "l_address_hno='" + s_lad_hno + "', l_address_area='" + s_lad_area + "', l_address_city='" + s_lad_city + "', " +
+            "l_address_pin='" + s_lad_pin + "', l_address_dist='" + s_lad_dist + "', l_address_state='" + s_lad_state + "', " +
+            "contact_no1='" + s_con_no1 + "', contact_no2='" + s_con_no2 + "', email_id='" + s_emailid + "', tc_from='" + s_tc_from + "', " +
+            "note='" + s_note + "', update_time='" + s_update_time + "', updated_by='" + s_updated_by + "' " +
+            "WHERE " +
+            "students_reg_id='" + s_student_id + "'";
+
+            if (Boolean.Parse(s_tc) && s_x_students_reg_id.Equals(string.Empty))
+            {
+                cmd.CommandText = command1;
+            }
+            else if (Boolean.Parse(s_tc) && !s_x_students_reg_id.Equals(string.Empty))
+            {
+                cmd.CommandText = command2;
+            }
+            else if (!Boolean.Parse(s_tc) && !s_x_students_reg_id.Equals(string.Empty))
+            {
+                cmd.CommandText = command3;
+            }
+            else if (!Boolean.Parse(s_tc) && s_x_students_reg_id.Equals(string.Empty))
+            {
+                cmd.CommandText = command4;
+            }
+
+            try
+            {
+                con.Close();
+                if(data_comparison() && e_addsection_permanentaddress_field_check() && e_editsection_other_field_check())
+                {
+                    string id = s_student_id;
+                    con.Open();
+                    int r = cmd.ExecuteNonQuery();
+                    con.Close();
+                    if (r.Equals(1))
+                    {
+                        Response.Write("<script language='javascript'>" +
+                       "window.alert('Data Updated Successfully');" +
+                       "</script>");
+                        e_id_ddl.ClearSelection();
+                        e_id_ddl.Items.FindByValue(id).Selected=true;
+                        initialize_get_strings();
+                        fetch_student_data(s_student_id);
+                        initialize_send_strings();
+                    }
+                    else
+                    {
+                        Response.Write("<script language='javascript'>" +
+                               "window.alert('Something went wrong while updating data..!! Call For Support..!!');" +
+                               "</script>");
+                    }
+                }
+            }
+            catch (Exception update_student_details_error)
+            {
+                Response.Write("<script language='javascript'>" +
+                               "window.alert('Something went wrong while updating data..!! Call For Support..!!\\n Error Message: " + update_student_details_error.Message + "');" +
+                               "</script>");
+            }
+        }
     }
 }

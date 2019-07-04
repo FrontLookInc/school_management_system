@@ -37,9 +37,9 @@
                                 <asp:Label runat="server" Font-Bold="true" Height="17px" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Text="Gender:" Width="160px" />
                                 <asp:DropDownList ID="gender_ddl" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Width="371px" TabIndex="4">
                                     <asp:ListItem Value="0" Text="-SELECT ITEM-" />
-                                    <asp:ListItem Value="1" Text="Male" />
-                                    <asp:ListItem Value="2" Text="Female" />
-                                    <asp:ListItem Value="3" Text="Others" />
+                                    <asp:ListItem Value="Male" Text="Male" />
+                                    <asp:ListItem Value="Female" Text="Female" />
+                                    <asp:ListItem Value="Others" Text="Others" />
                                 </asp:DropDownList>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <!--BLOOD GROUP DETAILS-->
@@ -172,7 +172,7 @@
                                 <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="NOTE:" Height="17px" Width="160px" AutoCompleteType="Disabled" />
                                 <asp:TextBox ID="note" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" AutoCompleteType="Disabled" />
                                 <br />
-                                <asp:CheckBox ID="xstudent_check" runat="server" Text=" Ex Student Of this Institution" AutoPostBack="true" OnCheckedChanged="xstudent_check_CheckedChanged" />
+                                <asp:CheckBox ID="xstudent_check" runat="server" Text=" Ex Student of this Institution" AutoPostBack="true" OnCheckedChanged="xstudent_check_CheckedChanged" />
                                 <br />
                                 <asp:Label ID="x_students_reg_id_label" runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Visible="false" Text="Ex Registration Id:" Height="17px" Width="160px" />
                                 <asp:TextBox ID="x_students_id" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" Visible="false" TextMode="SingleLine" AutoCompleteType="Disabled" />
@@ -223,9 +223,9 @@
                                     <asp:Label runat="server" Font-Bold="true" Height="17px" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Text="Gender:" Width="160px" />
                                     <asp:DropDownList ID="e_gender_ddl" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Width="371px">
                                         <asp:ListItem Value="0" Text="-SELECT ITEM-" />
-                                        <asp:ListItem Value="1" Text="Male" />
-                                        <asp:ListItem Value="2" Text="Female" />
-                                        <asp:ListItem Value="3" Text="Others" />
+                                        <asp:ListItem Value="Male" Text="Male" />
+                                        <asp:ListItem Value="Female" Text="Female" />
+                                        <asp:ListItem Value="Others" Text="Others" />
                                     </asp:DropDownList>
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                         <!--BLOOD GROUP DETAILS-->
@@ -310,7 +310,7 @@
                             <section id="e_localaddressdetails" class="slideInright">
                                 <div>
                                     <h4 style="text-align: left; text-anchor: middle; font-size: 1.2em; font-weight: 800">Local Address</h4>
-                                    <asp:CheckBox ID="e_pad_to_lad_sync" runat="server" Text=" Same as permanent address." OnCheckedChanged="e_pad_to_lad_sync_CheckedChanged" />
+                                    <asp:CheckBox ID="e_pad_to_lad_sync" runat="server" Text=" Same as permanent address." AutoPostBack="true" OnCheckedChanged="e_pad_to_lad_sync_CheckedChanged" />
                                     <asp:Label ID="e_instructon_for_pad_to_lad_sync" runat="server" Text="  (Uncheck The Check Box To Edit Permanent Address.)" Visible="false"/>
                                     <br />
                                     <!--HOUSE OR WARD NUMBER-->
@@ -345,14 +345,14 @@
                                     <h4 style="text-align: left; text-anchor: middle; font-size: 1.2em; font-weight: 800">Admission Details</h4>
                                     <!--ADMISSION DATE-->
                                     <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Admission Date:" Height="17px" Width="160px" />
-                                    <asp:TextBox ID="e_admission_date" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="Date" AutoCompleteType="Disabled" />
+                                    <asp:TextBox ID="e_admission_date" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="Date" AutoCompleteType="Disabled" ReadOnly="True" />
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                         <!--TRANSFERRED FROM-->
                                     <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Transferred From:" Height="17px" Width="160px" />
                                     <asp:TextBox ID="e_tc_from" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" TextMode="SingleLine" AutoCompleteType="Disabled" />
                                     <br />
                                     <!--transferred parameter-->
-                                    <asp:CheckBox ID="e_transferred_parameter" runat="server" Text="Transferred" />
+                                    <asp:CheckBox ID="e_transferred_parameter" runat="server" AutoPostBack="true" Text="Transferred" OnCheckedChanged="e_transferred_parameter_CheckedChanged" />
                                     <br />
                                     <asp:Panel ID="e_transfer_field" runat="server" Visible="false">
                                         <!--TRANSFERRED TO-->
@@ -368,8 +368,10 @@
                                     <asp:Label runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="NOTE:" Height="17px" Width="160px" />
                                     <asp:TextBox ID="e_note" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" AutoCompleteType="Disabled" />
                                     <br />
+                                    <asp:CheckBox ID="e_xstudent_check" runat="server" Text=" Ex Student of this Institution" AutoPostBack="true" OnCheckedChanged="e_xstudent_check_CheckedChanged" />
+                                    <br />
                                     <asp:Label ID="e_x_students_reg_id_label" runat="server" Style="text-align: start; text-anchor: middle; font-size: 1.0em; font-weight: 400" Font-Bold="true" Text="Ex Registration Id:" Visible="false" Height="17px" Width="160px" />
-                                    <asp:TextBox ID="e_x_students_reg_id" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" Visible="false" ReadOnly="true" TextMode="SingleLine" AutoCompleteType="Disabled" />
+                                    <asp:TextBox ID="e_x_students_reg_id" runat="server" Style="text-align: center; text-anchor: middle; font-size: 1.0em; font-weight: 400" Height="23px" Width="371px" Visible="false" ReadOnly="false" TextMode="SingleLine" AutoCompleteType="Disabled" />
 
                                 </div>
                             </section>
@@ -378,9 +380,9 @@
                             <!--SUBMIT BUTTON-->
                             <div style="margin-left: 250px; text-anchor: start; font-size: 1.0em; font-weight: 500; padding-left: 10px; padding-right: 10px">
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                                    <asp:Button ID="update_data" runat="server" Style="z-index: 1; padding-left: 20px; padding-right: 20px" BorderStyle="Solid" BackColor="#0066FF" ForeColor="White" EnableTheming="False" Font-Size="1.2em" Font-Bold="True" BorderWidth="4px" Text="Update" BorderColor="#0066FF" />
+                                    <asp:Button ID="update_data" runat="server" Style="z-index: 1; padding-left: 20px; padding-right: 20px" BorderStyle="Solid" BackColor="#0066FF" ForeColor="White" EnableTheming="False" Font-Size="1.2em" Font-Bold="True" BorderWidth="4px" Text="Update" BorderColor="#0066FF" OnClick="update_data_Click" />
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <asp:Button ID="delete_data" runat="server" Style="z-index: 1; padding-left: 20px; padding-right: 20px" BorderStyle="Solid" BackColor="#0066FF" ForeColor="White" EnableTheming="False" Font-Size="1.2em" Font-Bold="True" BorderWidth="4px" Text="Delete" BorderColor="#0066FF" />
+                                    <asp:Button ID="delete_data" runat="server" Style="z-index: 1; padding-left: 20px; padding-right: 20px" BorderStyle="Solid" BackColor="#0066FF" ForeColor="White" EnableTheming="False" Font-Size="1.2em" Font-Bold="True" BorderWidth="4px" Text="Delete" BorderColor="#0066FF" OnClick="delete_data_Click" />
                             </div>
                         </div>
                     </div>

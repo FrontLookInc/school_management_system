@@ -38,9 +38,13 @@ SELECT b.* FROM (SELECT * FROM (SELECT * FROM students WHERE (contact_no1=704447
                 b.name='Raj Chakraborty';
 */
 
+/*
 SELECT a.* FROM (SELECT * FROM students WHERE (contact_no1='7044476408' OR contact_no1 IS NULL OR contact_no1='7003564171' OR contact_no2='7003564171' OR contact_no2='7044476408' OR contact_no2 IS NULL OR father_name='Aswini Chakraborty' OR mother_name='Nirja Chakraborty'
  OR guardian_name='Akash' OR guardian_name='Aswini Chakraborty' or guardian_name='nita')) a WHERE 
                 a.name='Raj Chakraborty'
+				*/
+
+UPDATE students SET obsolate = 0 WHERE students_reg_id = 20190704080814173;
 
 /*SELECT * FROM students WHERE name='Raj Chakraborty' AND (contact_no1=7044476408 OR contact_no1=7003564171 OR contact_no2=7003564171 OR contact_no2=7044476408 OR father_name='Aswini Chakraborty' OR mother_name='Nirja Chakraborty'
  OR guardian_name='Akash' OR guardian_name='Aswini Chakraborty' or guardian_name='nita')
