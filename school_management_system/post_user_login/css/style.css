@@ -61,7 +61,7 @@ Responsive media queries
 ***********************************/
 
 .header {
-    background: url('../img/schoolbackground.png');
+    background: url('../../img/schoolbackground.png');
     background-size: cover;
     min-height: 630px;
     position: relative;

@@ -61,29 +61,50 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="school\Master1.Master" />
+    <Content Include="post_user_login\css\animate.css" />
+    <Content Include="post_user_login\css\bootstrap.css" />
+    <Content Include="post_user_login\css\bootstrap.min.css" />
+    <Content Include="post_user_login\css\font-awesome.min.css" />
+    <Content Include="post_user_login\css\style.css" />
+    <Content Include="post_user_login\fonts\fontawesome-webfont.svg" />
+    <Content Include="post_user_login\js\arial.js" />
+    <Content Include="post_user_login\js\bootstrap.min.js" />
+    <Content Include="post_user_login\js\cufon-yui.js" />
+    <Content Include="post_user_login\js\cuf_run.js" />
+    <Content Include="post_user_login\js\custom.js" />
+    <Content Include="post_user_login\js\jquery.easing.min.js" />
+    <Content Include="post_user_login\js\jquery.js" />
+    <Content Include="post_user_login\js\jquery.min.js" />
+    <Content Include="post_user_login\js\wow.js" />
+    <Content Include="templates\school\Master1.Master" />
+    <Content Include="templates\general\fonts\fontawesome-webfont.eot" />
+    <Content Include="templates\general\fonts\fontawesome-webfont.ttf" />
+    <Content Include="templates\general\fonts\fontawesome-webfont.woff" />
+    <Content Include="templates\general\fonts\fontawesome-webfont.woff2" />
+    <Content Include="templates\general\fonts\FontAwesome.otf" />
+    <Content Include="templates\school\Master2.Master" />
+    <Content Include="templates\school\fonts\fontawesome-webfont.eot" />
+    <Content Include="templates\school\fonts\fontawesome-webfont.ttf" />
+    <Content Include="templates\school\fonts\fontawesome-webfont.woff" />
+    <Content Include="templates\school\fonts\fontawesome-webfont.woff2" />
+    <Content Include="templates\school\fonts\FontAwesome.otf" />
+    <Content Include="post_user_login\manage_class.aspx" />
+    <Content Include="post_user_login\manage_students.aspx" />
+    <Content Include="post_user_login\manage_subjects.aspx" />
+    <Content Include="post_user_login\manage_users.aspx" />
+    <Content Include="templates\general\sishubikas1.Master" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="school\Master2.Master" />
-    <Content Include="school\fonts\fontawesome-webfont.eot" />
-    <Content Include="school\fonts\fontawesome-webfont.ttf" />
-    <Content Include="school\fonts\fontawesome-webfont.woff" />
-    <Content Include="school\fonts\fontawesome-webfont.woff2" />
-    <Content Include="school\fonts\FontAwesome.otf" />
-    <Content Include="school\sishu_bikas_model_school\manage_class.aspx" />
-    <Content Include="school\sishu_bikas_model_school\manage_students.aspx" />
-    <Content Include="school\sishu_bikas_model_school\manage_subjects.aspx" />
-    <Content Include="school\sishu_bikas_model_school\sishubikas1.Master" />
-    <Content Include="school\sishu_bikas_model_school\fonts\fontawesome-webfont.eot" />
-    <Content Include="school\sishu_bikas_model_school\fonts\fontawesome-webfont.ttf" />
-    <Content Include="school\sishu_bikas_model_school\fonts\fontawesome-webfont.woff" />
-    <Content Include="school\sishu_bikas_model_school\fonts\fontawesome-webfont.woff2" />
-    <Content Include="school\sishu_bikas_model_school\fonts\FontAwesome.otf" />
-    <Content Include="school\sishu_bikas_model_school\sishubikash_logged_in.Master" />
+    <Content Include="post_user_login\sishubikash_logged_in.Master" />
     <None Include="packages.config" />
+    <Content Include="post_user_login\fonts\fontawesome-webfont.eot" />
+    <Content Include="post_user_login\fonts\fontawesome-webfont.ttf" />
+    <Content Include="post_user_login\fonts\fontawesome-webfont.woff" />
+    <Content Include="post_user_login\fonts\fontawesome-webfont.woff2" />
+    <Content Include="post_user_login\fonts\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -92,6 +113,55 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="templates\general\contactform\contactform.js" />
+    <Content Include="templates\general\contactform\Readme.txt" />
+    <Content Include="templates\general\css\animate.css" />
+    <Content Include="templates\general\css\bootstrap.css" />
+    <Content Include="templates\general\css\bootstrap.min.css" />
+    <Content Include="templates\general\css\font-awesome.min.css" />
+    <Content Include="templates\general\css\style.css" />
+    <Content Include="templates\general\fonts\fontawesome-webfont.svg" />
+    <Content Include="templates\general\img\about-banner.jpg" />
+    <Content Include="templates\general\img\bg-banner03.jpg" />
+    <Content Include="templates\general\img\port01.jpg" />
+    <Content Include="templates\general\img\port02.jpg" />
+    <Content Include="templates\general\img\port03.jpg" />
+    <Content Include="templates\general\img\portfolio01.jpg" />
+    <Content Include="templates\general\img\portfolio02.jpg" />
+    <Content Include="index.html" />
+    <Content Include="templates\general\js\arial.js" />
+    <Content Include="templates\general\js\bootstrap.min.js" />
+    <Content Include="templates\general\js\cufon-yui.js" />
+    <Content Include="templates\general\js\cuf_run.js" />
+    <Content Include="templates\general\js\custom.js" />
+    <Content Include="templates\general\js\jquery.easing.min.js" />
+    <Content Include="templates\general\js\jquery.js" />
+    <Content Include="templates\general\js\jquery.min.js" />
+    <Content Include="templates\general\js\wow.js" />
+    <Content Include="templates\school\contactform\contactform.js" />
+    <Content Include="templates\school\contactform\Readme.txt" />
+    <Content Include="templates\school\css\animate.css" />
+    <Content Include="templates\school\css\bootstrap.css" />
+    <Content Include="templates\school\css\bootstrap.min.css" />
+    <Content Include="templates\school\css\font-awesome.min.css" />
+    <Content Include="templates\school\css\style.css" />
+    <Content Include="templates\school\fonts\fontawesome-webfont.svg" />
+    <Content Include="templates\school\img\about-banner.jpg" />
+    <Content Include="templates\school\img\bg-banner03.jpg" />
+    <Content Include="templates\school\img\port01.jpg" />
+    <Content Include="templates\school\img\port02.jpg" />
+    <Content Include="templates\school\img\port03.jpg" />
+    <Content Include="templates\school\img\portfolio01.jpg" />
+    <Content Include="templates\school\img\portfolio02.jpg" />
+    <Content Include="templates\school\js\arial.js" />
+    <Content Include="templates\school\js\bootstrap.min.js" />
+    <Content Include="templates\school\js\cufon-yui.js" />
+    <Content Include="templates\school\js\cuf_run.js" />
+    <Content Include="templates\school\js\custom.js" />
+    <Content Include="templates\school\js\jquery.easing.min.js" />
+    <Content Include="templates\school\js\jquery.js" />
+    <Content Include="templates\school\js\jquery.min.js" />
+    <Content Include="templates\school\js\wow.js" />
     <Content Include="contactform\contactform.js" />
     <Content Include="contactform\Readme.txt" />
     <Content Include="css\animate.css" />
@@ -100,6 +170,7 @@
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\style.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="img\schoolbackground.png" />
     <Content Include="img\about-banner.jpg" />
     <Content Include="img\bg-banner03.jpg" />
     <Content Include="img\port01.jpg" />
@@ -107,7 +178,6 @@
     <Content Include="img\port03.jpg" />
     <Content Include="img\portfolio01.jpg" />
     <Content Include="img\portfolio02.jpg" />
-    <Content Include="index.html" />
     <Content Include="js\arial.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\cufon-yui.js" />
@@ -117,134 +187,94 @@
     <Content Include="js\jquery.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\wow.js" />
-    <Content Include="school\contactform\contactform.js" />
-    <Content Include="school\contactform\Readme.txt" />
-    <Content Include="school\css\animate.css" />
-    <Content Include="school\css\bootstrap.css" />
-    <Content Include="school\css\bootstrap.min.css" />
-    <Content Include="school\css\font-awesome.min.css" />
-    <Content Include="school\css\style.css" />
-    <Content Include="school\fonts\fontawesome-webfont.svg" />
-    <Content Include="school\img\about-banner.jpg" />
-    <Content Include="school\img\bg-banner03.jpg" />
-    <Content Include="school\img\port01.jpg" />
-    <Content Include="school\img\port02.jpg" />
-    <Content Include="school\img\port03.jpg" />
-    <Content Include="school\img\portfolio01.jpg" />
-    <Content Include="school\img\portfolio02.jpg" />
-    <Content Include="school\js\arial.js" />
-    <Content Include="school\js\bootstrap.min.js" />
-    <Content Include="school\js\cufon-yui.js" />
-    <Content Include="school\js\cuf_run.js" />
-    <Content Include="school\js\custom.js" />
-    <Content Include="school\js\jquery.easing.min.js" />
-    <Content Include="school\js\jquery.js" />
-    <Content Include="school\js\jquery.min.js" />
-    <Content Include="school\js\wow.js" />
-    <Content Include="school\sishu_bikas_model_school\contactform\contactform.js" />
-    <Content Include="school\sishu_bikas_model_school\contactform\Readme.txt" />
-    <Content Include="school\sishu_bikas_model_school\css\animate.css" />
-    <Content Include="school\sishu_bikas_model_school\css\bootstrap.css" />
-    <Content Include="school\sishu_bikas_model_school\css\bootstrap.min.css" />
-    <Content Include="school\sishu_bikas_model_school\css\font-awesome.min.css" />
-    <Content Include="school\sishu_bikas_model_school\css\style.css" />
-    <Content Include="school\sishu_bikas_model_school\fonts\fontawesome-webfont.svg" />
-    <Content Include="school\sishu_bikas_model_school\images\schoolbackground.png" />
-    <Content Include="school\sishu_bikas_model_school\img\about-banner.jpg" />
-    <Content Include="school\sishu_bikas_model_school\img\bg-banner03.jpg" />
-    <Content Include="school\sishu_bikas_model_school\img\port01.jpg" />
-    <Content Include="school\sishu_bikas_model_school\img\port02.jpg" />
-    <Content Include="school\sishu_bikas_model_school\img\port03.jpg" />
-    <Content Include="school\sishu_bikas_model_school\img\portfolio01.jpg" />
-    <Content Include="school\sishu_bikas_model_school\img\portfolio02.jpg" />
-    <Content Include="school\sishu_bikas_model_school\js\arial.js" />
-    <Content Include="school\sishu_bikas_model_school\js\bootstrap.min.js" />
-    <Content Include="school\sishu_bikas_model_school\js\cufon-yui.js" />
-    <Content Include="school\sishu_bikas_model_school\js\cuf_run.js" />
-    <Content Include="school\sishu_bikas_model_school\js\custom.js" />
-    <Content Include="school\sishu_bikas_model_school\js\jquery.easing.min.js" />
-    <Content Include="school\sishu_bikas_model_school\js\jquery.js" />
-    <Content Include="school\sishu_bikas_model_school\js\jquery.min.js" />
-    <Content Include="school\sishu_bikas_model_school\js\wow.js" />
-    <Content Include="school\sishu_bikas_model_school\sishubikash_login.aspx" />
-    <Content Include="school\sishu_bikas_model_school\sqlcodes\schoolmanagement_script.sql" />
-    <Content Include="school\sishu_bikas_model_school\sqlcodes\testing.sql" />
-    <Content Include="school\sishu_bikas_model_school\style\style.css" />
-    <Content Include="school\sishu_bikas_model_school\test.aspx" />
+    <Content Include="sishubikash_login.aspx" />
+    <Content Include="sqlcodes\schoolmanagement_script.sql" />
+    <Content Include="sqlcodes\testing.sql" />
     <Content Include="style\style.css" />
+    <Content Include="test.aspx" />
+    <Content Include="templates\general\style\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="school\Master1.Master.cs">
+    <Compile Include="templates\school\Master1.Master.cs">
       <DependentUpon>Master1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="school\Master1.Master.designer.cs">
+    <Compile Include="templates\school\Master1.Master.designer.cs">
       <DependentUpon>Master1.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="school\Master2.Master.cs">
+    <Compile Include="templates\school\Master2.Master.cs">
       <DependentUpon>Master2.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="school\Master2.Master.designer.cs">
+    <Compile Include="templates\school\Master2.Master.designer.cs">
       <DependentUpon>Master2.Master</DependentUpon>
     </Compile>
-    <Compile Include="school\sishu_bikas_model_school\manage_class.aspx.cs">
+    <Compile Include="post_user_login\manage_class.aspx.cs">
       <DependentUpon>manage_class.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="school\sishu_bikas_model_school\manage_class.aspx.designer.cs">
+    <Compile Include="post_user_login\manage_class.aspx.designer.cs">
       <DependentUpon>manage_class.aspx</DependentUpon>
     </Compile>
-    <Compile Include="school\sishu_bikas_model_school\manage_students.aspx.cs">
+    <Compile Include="post_user_login\manage_students.aspx.cs">
       <DependentUpon>manage_students.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="school\sishu_bikas_model_school\manage_students.aspx.designer.cs">
+    <Compile Include="post_user_login\manage_students.aspx.designer.cs">
       <DependentUpon>manage_students.aspx</DependentUpon>
     </Compile>
-    <Compile Include="school\sishu_bikas_model_school\manage_subjects.aspx.cs">
+    <Compile Include="post_user_login\manage_subjects.aspx.cs">
       <DependentUpon>manage_subjects.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="school\sishu_bikas_model_school\manage_subjects.aspx.designer.cs">
+    <Compile Include="post_user_login\manage_subjects.aspx.designer.cs">
       <DependentUpon>manage_subjects.aspx</DependentUpon>
     </Compile>
-    <Compile Include="school\sishu_bikas_model_school\sishubikas1.Master.cs">
+    <Compile Include="post_user_login\manage_users.aspx.cs">
+      <DependentUpon>manage_users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="post_user_login\manage_users.aspx.designer.cs">
+      <DependentUpon>manage_users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="templates\general\sishubikas1.Master.cs">
       <DependentUpon>sishubikas1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="school\sishu_bikas_model_school\sishubikas1.Master.designer.cs">
+    <Compile Include="templates\general\sishubikas1.Master.designer.cs">
       <DependentUpon>sishubikas1.Master</DependentUpon>
     </Compile>
-    <Compile Include="school\sishu_bikas_model_school\sishubikash_logged_in.Master.cs">
+    <Compile Include="post_user_login\sishubikash_logged_in.Master.cs">
       <DependentUpon>sishubikash_logged_in.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="school\sishu_bikas_model_school\sishubikash_logged_in.Master.designer.cs">
+    <Compile Include="post_user_login\sishubikash_logged_in.Master.designer.cs">
       <DependentUpon>sishubikash_logged_in.Master</DependentUpon>
     </Compile>
-    <Compile Include="school\sishu_bikas_model_school\sishubikash_login.aspx.cs">
+    <Compile Include="sishubikash_login.aspx.cs">
       <DependentUpon>sishubikash_login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="school\sishu_bikas_model_school\sishubikash_login.aspx.designer.cs">
+    <Compile Include="sishubikash_login.aspx.designer.cs">
       <DependentUpon>sishubikash_login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="school\sishu_bikas_model_school\test.aspx.cs">
+    <Compile Include="test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="school\sishu_bikas_model_school\test.aspx.designer.cs">
+    <Compile Include="test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
-    <Folder Include="school\images\" />
-    <Folder Include="school\select\css\" />
-    <Folder Include="school\select\js\" />
+    <Folder Include="sishu_bikas_model_school\" />
+    <Folder Include="templates\general\images\" />
+    <Folder Include="templates\school\images\" />
+    <Folder Include="templates\school\select\css\" />
+    <Folder Include="templates\school\select\js\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,140 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="sishubikas1.Master.cs" Inherits="School_Management_System.sishubikas1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Online School Management System</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
+    <!-- CuFon: Enables smooth pretty custom font rendering. 100% SEO friendly. To disable, remove this section -->
+    <script type="text/javascript" src="js/cufon-yui.js"></script>
+    <script type="text/javascript" src="js/arial.js"></script>
+    <script type="text/javascript" src="js/cuf_run.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto:300,400|Questrial|Satisfy">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="myFunction()">
+    <div class="header">
+        <div class="bg-color">
+            <header id="main-header">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#lauraMenu">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Sishu Bikash Model School</a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="lauraMenu">
+
+
+                            <ul class="nav navbar-nav navbar-right navbar-border">
+                                <li class="active"><a href="#main-header">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#portfolio">Portfolio</a>
+                                    <ul class="navbar-collapse">
+                                        <li><a href="../../index.html">Home</a></li>
+                                        <li><a href="manage_subjects.aspx">Manage Subjects</a></li>
+                                        <li><a href="manage_class.aspx">Manage Class</a></li>
+                                        <li><a href="sishubikash_login.aspx">Login</a></li>
+                                        <li><a href="#LogOut">LogOut</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#testimonial">Testimonial</a></li>
+                                <li><a href="#contact">Contact Us</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div class="wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 wow fadeIn delay-05s">
+                            <div class="banner-text">
+                                <h2>Welcome To <span>Sishu Bikash Model School</span></h2>
+                                <!--<p>
+                                    A Creative Photographer
+                                    <br>
+                                    & Designer
+                                </p>-->
+                            </div>
+                            <div class="overlay-detail text-center">
+                                <a href="#about"><i class="fa fa-angle-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="form1" runat="server">
+        <div>
+            <div>
+                
+
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <footer class="footer-2 text-center-xs bg--white">
+        <div class="container">
+            <!--end row-->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer">
+                        © Copyright Laura Theme. All Rights Reserved
+            <div class="credits">
+                <!--
+                All the links in the footer should remain intact. 
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Laura
+              -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade.com</a>
+            </div>
+                    </div>
+                </div>
+                <!--<div class="col-md-6 text-right">
+                    <ul class="social-list">
+                        <li>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-vimeo"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>-->
+
+            </div>
+            <!--end row-->
+        </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="contactform/contactform.js"></script>
+</body>
+</html>

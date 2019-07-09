@@ -4,55 +4,42 @@
     Author: BootstrapMade.com
     Author URL: https://bootstrapmade.com
 */
-.GridPosition {
-    position:inherit;
-    width:inherit;
-    /*
-    max-width:inherit;
-        */
-}
 
 body {
-    line-height: 1.4;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-    font-size: 15px;
-    font-weight: 400;
+  line-height: 1.4;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 ol, ul {
-    list-style: none;
+  list-style: none;
 }
 
 blockquote, q {
-    quotes: none;
+  quotes: none;
 }
 
-    blockquote:before, blockquote:after, q:before, q:after {
-        content: '';
-        content: none;
-    }
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    z-index: 1;
-    left: 61px;
-    top: 488px;
-    position: absolute;
-    height: 127px;
-    width: 202px;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 a {
-    outline: none;
+  outline: none;
 }
 
-    a:hover, a:focus, a:active {
-        text-decoration: none;
-        outline: none;
-    }
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  outline: none;
+}
 
 /***********************************
 ************************************
@@ -61,10 +48,10 @@ Responsive media queries
 ***********************************/
 
 .header {
-    background: url('../img/schoolbackground.png');
-    background-size: cover;
-    min-height: 630px;
-    position: relative;
+  background: url('../img/bg-banner03.jpg') no-repeat fixed;
+  background-size: cover;
+  min-height: 630px;
+  position: relative;
 }
 
 .header2 {
@@ -73,21 +60,21 @@ Responsive media queries
 }
 
 .navbar-default {
-    background-color: transparent;
-    border: 0px;
-    text-align: center;
-    padding: 20px 0;
-    transition: all 0.3s;
+  background-color: transparent;
+  border: 0px;
+  text-align:center;
+  padding: 20px 0;
+  transition: all 0.3s;
 }
 
 .navbar-brand {
-    font-size: 36px;
-    font-family: 'Satisfy', cursive;
+  font-size: 36px;
+  font-family: 'Satisfy', cursive;
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-    color: #fff;
-    outline: none;
+  color: #fff;
+  outline: none;
 }
 
 
@@ -103,9 +90,9 @@ Responsive media queries
 
 
 .navbar-default .navbar-nav > li:focus, .navbar-default .navbar-nav > li:hover {
-    stroke-width: 20px;
-    stroke-opacity: 0.8;
-    stroke: white;
+    stroke-width:20px;
+    stroke-opacity:0.8;
+    stroke:white;
 }
 
 
@@ -124,46 +111,47 @@ Responsive media queries
             background-color: dimgray;
             text-anchor: middle;
         }
-
-            .navbar-default .navbar-nav > li > a:focus > ul, .navbar-default .navbar-nav > li:hover > ul {
-                background-color: transparent;
-            }
-
-                .navbar-default .navbar-nav > li > a:focus > ul:hover, .navbar-default .navbar-nav > li:hover > a:hover > ul:hover {
-                    background-color: dodgerblue;
-                }
-
-.navbar-default .navbar-nav > li > ul > li {
-    display: none;
-    text-anchor: middle;
-}
-
-
-.navbar-default .navbar-nav > li:focus ul li, .navbar-default .navbar-nav > li:hover ul li {
-    padding: 10px;
-    background-color: dimgray;
-    display: block;
-}
-
-    .navbar-default .navbar-nav > li:focus ul li, .navbar-default .navbar-nav > li:hover ul li a {
-        background-color: transparent;
-        color: white;
-        text-anchor: middle;
-    }
-
-        .navbar-default .navbar-nav > li:focus ul li, .navbar-default .navbar-nav > li:hover ul li a:hover {
+        
+        .navbar-default .navbar-nav > li > a:focus>ul, .navbar-default .navbar-nav > li:hover > ul {
             background-color: transparent;
-            color: dodgerblue;
-            text-anchor: middle;
         }
 
-.navbar-default .navbar-nav > li > a:focus > ul:hover > li, .navbar-default .navbar-nav > li:hover > a:hover > ul:hover {
-    background-color: dodgerblue;
-}
+            .navbar-default .navbar-nav > li > a:focus > ul:hover, .navbar-default .navbar-nav > li:hover > a:hover > ul:hover {
+                background-color: dodgerblue;
+            }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
-    color: white;
-    background-color: transparent;
+            .navbar-default .navbar-nav > li > ul > li {
+                display: none;
+                text-anchor:middle;
+            }
+
+
+            .navbar-default .navbar-nav > li:focus ul li, .navbar-default .navbar-nav > li:hover ul li {
+                padding: 10px;
+                background-color: dimgray;
+                display: block;
+            }
+
+                .navbar-default .navbar-nav > li:focus ul li, .navbar-default .navbar-nav > li:hover ul li a {
+                    background-color: transparent;
+                    color: white;
+                    text-anchor: middle;
+                }
+
+                    .navbar-default .navbar-nav > li:focus ul li, .navbar-default .navbar-nav > li:hover ul li a:hover {
+                        background-color: transparent;
+                        color: dodgerblue;
+                        text-anchor: middle;
+                    }
+            
+            .navbar-default .navbar-nav > li > a:focus > ul:hover>li, .navbar-default .navbar-nav > li:hover > a:hover > ul:hover {
+                background-color: dodgerblue;
+
+            }
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color: white;
+  background-color: transparent;
 }
 
 @media (max-width: 768px) {
@@ -451,14 +439,10 @@ footer {
 
 .grid-item {
   width: 200px;
-    top: 4px;
-    left: 9px;
 }
 
 .grid-item--width2 {
   width: 400px;
-    top: 1796px;
-    left: 22px;
 }
 
 /***********************************
